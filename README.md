@@ -4,6 +4,8 @@
 
 ![Kairyth — Motion, timed by intent](docs/images/kairyth-showcase.png)
 
+[▶ 观看宣传视频（YouTube）](https://youtu.be/HiZR8GwEjxE?si=PPxIKmtAUMYT0aU3)
+
 **Motion, timed by intent.**
 
 Kairyth 是本机运行的角色动画与镜头导演工作台，提供资产管理、角色绑定与蒙皮、IK、动作重定向、非破坏动画编辑、地形与步态处理、最终时间轴和多机位导演。界面支持中文和英文，可通过脚本启动和关闭本机服务。

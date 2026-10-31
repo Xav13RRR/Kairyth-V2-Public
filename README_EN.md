@@ -4,6 +4,8 @@
 
 ![Kairyth — Motion, timed by intent](docs/images/kairyth-showcase.png)
 
+[▶ Watch the promo video (YouTube)](https://youtu.be/HiZR8GwEjxE?si=PPxIKmtAUMYT0aU3)
+
 **Motion, timed by intent.**
 
 Kairyth is a locally hosted character-animation and shot-direction workbench for asset management, rigging and skinning, IK, motion retargeting, non-destructive animation editing, terrain and gait processing, final timeline assembly, and multi-camera direction. The interface supports Chinese and English, with scripts to start and stop the local service.
