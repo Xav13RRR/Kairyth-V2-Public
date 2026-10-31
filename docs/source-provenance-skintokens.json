@@ -1,0 +1,853 @@
+{
+  "audit_date": "2026-10-31",
+  "comparison_ref": "273b691d35989d71cd17ff2895fdc735097b92d1",
+  "method": "Tracked Python source; CRLF normalized to LF before Git blob SHA-1 comparison against the fixed upstream reference.",
+  "files": [
+    {
+      "path": "third_party/SkinTokens/bpy_server.py",
+      "local_normalized_git_blob_sha1": "c22455ca1d27ca554b067592e75ea87c3eb17b6b",
+      "upstream_blob_sha1": "c22455ca1d27ca554b067592e75ea87c3eb17b6b",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/bpy_server.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/demo.py",
+      "local_normalized_git_blob_sha1": "a2cb3a2bc6380428ff16b74592049a2f3fb18402",
+      "upstream_blob_sha1": "a2cb3a2bc6380428ff16b74592049a2f3fb18402",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/demo.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/download.py",
+      "local_normalized_git_blob_sha1": "8091bc370ab204f972cce09a6670ec04c72217de",
+      "upstream_blob_sha1": "8091bc370ab204f972cce09a6670ec04c72217de",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/download.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/scripts/motionbuilder_skin_infer.py",
+      "local_normalized_git_blob_sha1": "145ef86dfc252e93d1da12123ec1a28d7f0cc8df",
+      "upstream_blob_sha1": null,
+      "comparison": "local-addition",
+      "upstream_url": null,
+      "package_license": "Apache-2.0 for maintainer-original integration; adapted third-party portions retain their terms",
+      "provenance": {
+        "confidence": "maintainer-original-integration",
+        "license": "Apache-2.0 for original Kairyth/MKA integration contributions; third-party terms retained",
+        "evidence": "Kairyth/MKA NPZ inference bridge."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/__init__.py",
+      "local_normalized_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "upstream_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/augment.py",
+      "local_normalized_git_blob_sha1": "0909d5dfb01b5c40a0213987c92b6052bdbf6e89",
+      "upstream_blob_sha1": "0909d5dfb01b5c40a0213987c92b6052bdbf6e89",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/augment.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/datapath.py",
+      "local_normalized_git_blob_sha1": "268123aa11032cdf0ca25ebbc7bf3d933e5c4199",
+      "upstream_blob_sha1": "268123aa11032cdf0ca25ebbc7bf3d933e5c4199",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/datapath.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/dataset.py",
+      "local_normalized_git_blob_sha1": "6d8de18b42738811cf678a601136d20f8599ab1c",
+      "upstream_blob_sha1": "6d8de18b42738811cf678a601136d20f8599ab1c",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/dataset.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/order.py",
+      "local_normalized_git_blob_sha1": "2bde3911fe4fd758f3c3fc57c544c1ab9e1e49b3",
+      "upstream_blob_sha1": "2bde3911fe4fd758f3c3fc57c544c1ab9e1e49b3",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/order.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/sampler.py",
+      "local_normalized_git_blob_sha1": "ef7bc0d8fccd2bd4e0b2bd13887c1c96b2caa6dc",
+      "upstream_blob_sha1": "ef7bc0d8fccd2bd4e0b2bd13887c1c96b2caa6dc",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/sampler.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/spec.py",
+      "local_normalized_git_blob_sha1": "3719d80052549e8d4aef3e77dab5dca8f741a73f",
+      "upstream_blob_sha1": "3719d80052549e8d4aef3e77dab5dca8f741a73f",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/spec.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/transform.py",
+      "local_normalized_git_blob_sha1": "3601d755766932490a584aa495848402950a0e19",
+      "upstream_blob_sha1": "3601d755766932490a584aa495848402950a0e19",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/transform.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/data/vertex_group.py",
+      "local_normalized_git_blob_sha1": "04c0c174fcff5f1eadf451e7b11016304f6f1a88",
+      "upstream_blob_sha1": "04c0c174fcff5f1eadf451e7b11016304f6f1a88",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/data/vertex_group.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/__init__.py",
+      "local_normalized_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "upstream_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/_flash_attn.py",
+      "local_normalized_git_blob_sha1": "e086e5e8e17581192f4fcfa18161f83100bb2a38",
+      "upstream_blob_sha1": null,
+      "comparison": "local-addition",
+      "upstream_url": null,
+      "package_license": "Apache-2.0 for maintainer-original integration; adapted third-party portions retain their terms",
+      "provenance": {
+        "confidence": "maintainer-original-integration",
+        "license": "Apache-2.0 for original Kairyth/MKA integration contributions; third-party terms retained",
+        "evidence": "Kairyth/MKA Windows and SDPA attention compatibility helper."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/__init__.py",
+      "local_normalized_git_blob_sha1": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+      "upstream_blob_sha1": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/get_model.py",
+      "local_normalized_git_blob_sha1": "4247b93ccb89c31dd8a08a731bc2b4c4a722dd9b",
+      "upstream_blob_sha1": "4247b93ccb89c31dd8a08a731bc2b4c4a722dd9b",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/get_model.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/__init__.py",
+      "local_normalized_git_blob_sha1": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+      "upstream_blob_sha1": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/__init__.py",
+      "local_normalized_git_blob_sha1": "0729b49eadf964584d3524d9c0f6adec3f04a6a9",
+      "upstream_blob_sha1": "0729b49eadf964584d3524d9c0f6adec3f04a6a9",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/modules/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/checkpoint.py",
+      "local_normalized_git_blob_sha1": "c54807df8ceded8c30a9a2f2a6586228f3d59817",
+      "upstream_blob_sha1": "c54807df8ceded8c30a9a2f2a6586228f3d59817",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/modules/checkpoint.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/distributions.py",
+      "local_normalized_git_blob_sha1": "cf1cdcd53f1eb534b55d92ae1bd0b9854f6b890c",
+      "upstream_blob_sha1": "cf1cdcd53f1eb534b55d92ae1bd0b9854f6b890c",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/modules/distributions.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/embedder.py",
+      "local_normalized_git_blob_sha1": "223de828f44903a3ce96b59d1cc5621e0989b535",
+      "upstream_blob_sha1": "223de828f44903a3ce96b59d1cc5621e0989b535",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/modules/embedder.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/transformer_blocks.py",
+      "local_normalized_git_blob_sha1": "ba3ecffd0fd3e05708a9c9cc29b7ff45591a9daf",
+      "upstream_blob_sha1": "ba3ecffd0fd3e05708a9c9cc29b7ff45591a9daf",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/modules/transformer_blocks.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/__init__.py",
+      "local_normalized_git_blob_sha1": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+      "upstream_blob_sha1": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/tsal/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/loss.py",
+      "local_normalized_git_blob_sha1": "a49fbacf64799505078fd43664fc944bddf34a42",
+      "upstream_blob_sha1": "a49fbacf64799505078fd43664fc944bddf34a42",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/tsal/loss.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/sal_perceiver.py",
+      "local_normalized_git_blob_sha1": "ded43f16368ea0b4df43de45db60c300efa05286",
+      "upstream_blob_sha1": "ded43f16368ea0b4df43de45db60c300efa05286",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/tsal/sal_perceiver.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/tsal_base.py",
+      "local_normalized_git_blob_sha1": "0b39830f5d45c7e87ece1c24b940a2dea6074431",
+      "upstream_blob_sha1": "0b39830f5d45c7e87ece1c24b940a2dea6074431",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/models/tsal/tsal_base.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/utils/__init__.py",
+      "local_normalized_git_blob_sha1": "76d2dd39781034eaa33293a2243ebee3b3c982c6",
+      "upstream_blob_sha1": "76d2dd39781034eaa33293a2243ebee3b3c982c6",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/utils/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/utils/eval.py",
+      "local_normalized_git_blob_sha1": "954b9ae2643c8adb6c9af6141ede2b38a329db22",
+      "upstream_blob_sha1": "954b9ae2643c8adb6c9af6141ede2b38a329db22",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/utils/eval.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/utils/misc.py",
+      "local_normalized_git_blob_sha1": "2174de332726546011e0e7bb2df422342b96975c",
+      "upstream_blob_sha1": "2174de332726546011e0e7bb2df422342b96975c",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/michelangelo/utils/misc.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "high-source-family",
+        "license": "GPL version 3 used for this distribution; no unverified later-version option asserted or existing rights removed",
+        "url": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+        "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/parse_encoder.py",
+      "local_normalized_git_blob_sha1": "00c37098665a08b1fe1d9a9f19a1ebe444c303e8",
+      "upstream_blob_sha1": "00c37098665a08b1fe1d9a9f19a1ebe444c303e8",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/parse_encoder.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/attention_processor.py",
+      "local_normalized_git_blob_sha1": "b28b8997c9811972fa9915a6edcdfab0535a85bd",
+      "upstream_blob_sha1": "b28b8997c9811972fa9915a6edcdfab0535a85bd",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/attention_processor.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "MIT nearest public match; earlier Apache lineage must be retained",
+        "confidence": "high-adapted",
+        "url": "https://github.com/VAST-AI-Research/TripoSG/blob/fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c/triposg/models/attention_processor.py",
+        "evidence": "Renamed processor constructors have identical AST; call implementations modified. Earlier diffusers/Hunyuan Apache lineage also identified."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/FSQ.py",
+      "local_normalized_git_blob_sha1": "9f7bcf0e670071a04a19495ea8efa7d3ead0a1fe",
+      "upstream_blob_sha1": "9f7bcf0e670071a04a19495ea8efa7d3ead0a1fe",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/FSQ.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "MIT",
+        "confidence": "high-adapted",
+        "url": "https://github.com/lucidrains/vector-quantize-pytorch/blob/9e5d4ecfdfd72abe9a4baa056d0be21532be4b69/vector_quantize_pytorch/finite_scalar_quantization.py",
+        "evidence": "Five helpers and two methods have identical AST; other portions are modified."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/SimVQ.py",
+      "local_normalized_git_blob_sha1": "4e23d3f721d77b7945876a21678ecfdf318eb129",
+      "upstream_blob_sha1": "4e23d3f721d77b7945876a21678ecfdf318eb129",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/SimVQ.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "MIT",
+        "confidence": "high-adapted",
+        "url": "https://github.com/youngsheen/SimVQ/blob/d8bd94d9ca30273c8bab1b4194d8e1dc0b9d3f70/taming/modules/vqvae/quantize.py",
+        "earlier_url": "https://github.com/CompVis/taming-transformers/blob/3ba01b241669f5ade541ce990f7650a3b8f65318/taming/modules/vqvae/quantize.py",
+        "evidence": "remap_to_used, unmap_to_all, get_codebook_entry AST identical; earlier taming methods also match."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/__init__.py",
+      "local_normalized_git_blob_sha1": "93f59dd8fea38fe9a245e1f5eced949c9221fe16",
+      "upstream_blob_sha1": "93f59dd8fea38fe9a245e1f5eced949c9221fe16",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-and-module-attribution",
+        "license": "MIT package declaration; nested Apache/MIT sources require per-segment attribution",
+        "evidence": "SkinTokens credits 3DShape2VecSet; relevant implementation also references diffusers/Tripo. Not a proof of exact original revision for each segment."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/autoencoder_kl_tripo2.py",
+      "local_normalized_git_blob_sha1": "fa21d6f80e38f91cb02a555ef668117918c568b6",
+      "upstream_blob_sha1": "fa21d6f80e38f91cb02a555ef668117918c568b6",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/autoencoder_kl_tripo2.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "MIT nearest public match; nested provenance applies",
+        "confidence": "medium-partial",
+        "url": "https://github.com/VAST-AI-Research/TripoSG/blob/fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c/triposg/models/autoencoders/autoencoder_kl_triposg.py",
+        "evidence": "Class structure and partial implementation match; exact copied expression boundaries unresolved."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/get_model.py",
+      "local_normalized_git_blob_sha1": "6661546b671ab243ffda9d8a7642ebdebfc619c1",
+      "upstream_blob_sha1": "6661546b671ab243ffda9d8a7642ebdebfc619c1",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/get_model.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-and-module-attribution",
+        "license": "MIT package declaration; nested Apache/MIT sources require per-segment attribution",
+        "evidence": "SkinTokens credits 3DShape2VecSet; relevant implementation also references diffusers/Tripo. Not a proof of exact original revision for each segment."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/miche_transformer_blocks.py",
+      "local_normalized_git_blob_sha1": "97874e6bcff125d8af3b4b1c413ecc523dfc19b0",
+      "upstream_blob_sha1": "97874e6bcff125d8af3b4b1c413ecc523dfc19b0",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/miche_transformer_blocks.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "GPLv3-derived code with retained guided-diffusion MIT portions",
+        "confidence": "high-derived",
+        "url": "https://github.com/NeuralCarver/Michelangelo/blob/6d83b0bacef92715dd5179d45647ed9a3d39bc95/michelangelo/models/modules/transformer_blocks.py",
+        "earlier_url": "https://github.com/openai/guided-diffusion/blob/22e0df8183507e13a7813f8d38d51b072ca1e67c/guided_diffusion/nn.py",
+        "evidence": "init_linear, ResidualAttentionBlock and Transformer AST identical; additional classes modified; checkpoint explicitly credits guided-diffusion."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/skin_fsq_cvae_model.py",
+      "local_normalized_git_blob_sha1": "6b66d9e9486d261f0a5d67f795bbe60499fb26e3",
+      "upstream_blob_sha1": "6b66d9e9486d261f0a5d67f795bbe60499fb26e3",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/skin_fsq_cvae_model.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-and-module-attribution",
+        "license": "MIT package declaration; nested Apache/MIT sources require per-segment attribution",
+        "evidence": "SkinTokens credits 3DShape2VecSet; relevant implementation also references diffusers/Tripo. Not a proof of exact original revision for each segment."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/vae.py",
+      "local_normalized_git_blob_sha1": "0e53eada49dd0cbca365829411ef78e0cbec711e",
+      "upstream_blob_sha1": "0e53eada49dd0cbca365829411ef78e0cbec711e",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/autoencoders/vae.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "MIT nearest public match; earlier Apache lineage must be retained",
+        "confidence": "high-adapted",
+        "url": "https://github.com/VAST-AI-Research/TripoSG/blob/fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c/triposg/models/autoencoders/vae.py",
+        "evidence": "Four Gaussian distribution methods AST identical; earlier diffusers Apache lineage also identified."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/embeddings.py",
+      "local_normalized_git_blob_sha1": "cd253932239850792f53b2b8c7bfd126bbcc26ce",
+      "upstream_blob_sha1": "cd253932239850792f53b2b8c7bfd126bbcc26ce",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/embeddings.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "MIT nearest public match; nested provenance applies",
+        "confidence": "high-adapted",
+        "url": "https://github.com/VAST-AI-Research/TripoSG/blob/fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c/triposg/models/embeddings.py",
+        "evidence": "get_dims AST identical; FrequencyPositionalEmbedding implementation/documentation strongly corresponds."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/transformers/__init__.py",
+      "local_normalized_git_blob_sha1": "3a61dd3419b5cc0844e061e583b172c5ad5454f0",
+      "upstream_blob_sha1": "3a61dd3419b5cc0844e061e583b172c5ad5454f0",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/transformers/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-and-module-attribution",
+        "license": "MIT package declaration; nested Apache/MIT sources require per-segment attribution",
+        "evidence": "SkinTokens credits 3DShape2VecSet; relevant implementation also references diffusers/Tripo. Not a proof of exact original revision for each segment."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/transformers/modeling_outputs.py",
+      "local_normalized_git_blob_sha1": "0928fa0ca39275a85f8b7fa49c68af745d4c74c5",
+      "upstream_blob_sha1": "0928fa0ca39275a85f8b7fa49c68af745d4c74c5",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/transformers/modeling_outputs.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "MIT nearest public match; nested provenance applies",
+        "confidence": "exact-public-match",
+        "url": "https://github.com/VAST-AI-Research/TripoSG/blob/fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c/triposg/models/transformers/modeling_outputs.py",
+        "evidence": "Entire file identical after line-ending normalization; short file equality does not prove unique copying direction."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/transformers/tripo2_transformer.py",
+      "local_normalized_git_blob_sha1": "55fd8cf093a9d5c9fccb3494964ee91062d32f32",
+      "upstream_blob_sha1": "55fd8cf093a9d5c9fccb3494964ee91062d32f32",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/transformers/tripo2_transformer.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "license": "Apache-2.0",
+        "confidence": "explicit-file-header",
+        "url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae/transformers/tripo2_transformer.py",
+        "evidence": "Existing Apache header names HunyuanDiT Authors, Qixun Wang and HuggingFace."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae_model.py",
+      "local_normalized_git_blob_sha1": "15dbab7eb2e304e30099b0022b08c005138cf693",
+      "upstream_blob_sha1": "a2b4e88b6997883ce5861333bb498dc9593ff80d",
+      "comparison": "modified",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/skin_vae_model.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/spec.py",
+      "local_normalized_git_blob_sha1": "fbb0e932f5dcfdb45351b63fad325018d62f84b0",
+      "upstream_blob_sha1": "fbb0e932f5dcfdb45351b63fad325018d62f84b0",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/spec.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/tokenrig.py",
+      "local_normalized_git_blob_sha1": "d185f65bd65ddfbc2068cda3e4b372ae170dc4e5",
+      "upstream_blob_sha1": "ab35e3fb8dd850737cba7d1782f03c75846971be",
+      "comparison": "modified",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/tokenrig.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/utils.py",
+      "local_normalized_git_blob_sha1": "8dec6ec71822ef1f46bb5fbb2e4170d8be00f736",
+      "upstream_blob_sha1": "8dec6ec71822ef1f46bb5fbb2e4170d8be00f736",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/model/utils.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/__init__.py",
+      "local_normalized_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "upstream_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/info/__init__.py",
+      "local_normalized_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "upstream_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/info/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/info/asset.py",
+      "local_normalized_git_blob_sha1": "0eb4a3387433b48715a892126ff55cb82a57f9da",
+      "upstream_blob_sha1": "0eb4a3387433b48715a892126ff55cb82a57f9da",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/info/asset.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/info/voxel.py",
+      "local_normalized_git_blob_sha1": "6b509998d9caab95f5b2e0dbe30819fce0dd6a43",
+      "upstream_blob_sha1": "6b509998d9caab95f5b2e0dbe30819fce0dd6a43",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/info/voxel.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/parser/__init__.py",
+      "local_normalized_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "upstream_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/parser/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/parser/abstract.py",
+      "local_normalized_git_blob_sha1": "fce33a4f1333708421f125fd763d9e09a9ef4970",
+      "upstream_blob_sha1": "fce33a4f1333708421f125fd763d9e09a9ef4970",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/parser/abstract.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/parser/bpy.py",
+      "local_normalized_git_blob_sha1": "fc33b8c66fff4eccbd60bc04f9c0a223e87ceec5",
+      "upstream_blob_sha1": "fc33b8c66fff4eccbd60bc04f9c0a223e87ceec5",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/parser/bpy.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/rig_package/utils.py",
+      "local_normalized_git_blob_sha1": "80a89f9fa5c3a3e2a6ef0646071ff638e640f3d1",
+      "upstream_blob_sha1": "80a89f9fa5c3a3e2a6ef0646071ff638e640f3d1",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/rig_package/utils.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/server/__init__.py",
+      "local_normalized_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "upstream_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/server/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/server/bpy_server.py",
+      "local_normalized_git_blob_sha1": "913eac27ebdc49ca7ca583d9c41eb5997e6c5a9f",
+      "upstream_blob_sha1": "913eac27ebdc49ca7ca583d9c41eb5997e6c5a9f",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/server/bpy_server.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/server/spec.py",
+      "local_normalized_git_blob_sha1": "f2ca6d72eb17b346e23f24038216eb103f370fb3",
+      "upstream_blob_sha1": "f2ca6d72eb17b346e23f24038216eb103f370fb3",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/server/spec.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/tokenizer/__init__.py",
+      "local_normalized_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "upstream_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/tokenizer/__init__.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/tokenizer/parse.py",
+      "local_normalized_git_blob_sha1": "c07d958d14fc904022351b0288eeed9d85c2baca",
+      "upstream_blob_sha1": "c07d958d14fc904022351b0288eeed9d85c2baca",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/tokenizer/parse.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/tokenizer/spec.py",
+      "local_normalized_git_blob_sha1": "d4cc653519937bb98d6059d765686e2ea53b89dc",
+      "upstream_blob_sha1": "d4cc653519937bb98d6059d765686e2ea53b89dc",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/tokenizer/spec.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    },
+    {
+      "path": "third_party/SkinTokens/src/tokenizer/tokenizer_part.py",
+      "local_normalized_git_blob_sha1": "5e91e3c37be61653dec2be3263bfd2b53f90e5fc",
+      "upstream_blob_sha1": "5e91e3c37be61653dec2be3263bfd2b53f90e5fc",
+      "comparison": "identical",
+      "upstream_url": "https://github.com/VAST-AI-Research/SkinTokens/blob/273b691d35989d71cd17ff2895fdc735097b92d1/src/tokenizer/tokenizer_part.py",
+      "package_license": "MIT, subject to nested sources and existing rights",
+      "provenance": {
+        "confidence": "package-origin-confirmed",
+        "license": "MIT package declaration; no blanket clearance of all earlier dependencies",
+        "evidence": "File-level Git blob comparison to selected SkinTokens upstream snapshot."
+      }
+    }
+  ],
+  "scope_note": "File comparisons record source provenance; model, training-data and asset licenses remain separate from code licensing."
+}

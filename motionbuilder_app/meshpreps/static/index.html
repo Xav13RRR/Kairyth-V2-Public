@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>角色绑定与蒙皮</title>
+  <link rel="stylesheet" href="/static/style.css?v=motionbuilder-15" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/app-static/vendor/three/build/three.module.js",
+      "three/addons/": "/app-static/vendor/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="rig-page-title">
+    <h1>角色绑定与蒙皮</h1>
+    <p id="health" class="health hidden" aria-hidden="true"></p>
+  </header>
+
+  <main class="layout">
+    <section class="panel stage-shell">
+      <div id="uploadStepSection" class="mka-step upload-step">
+        <div id="dropzone" class="upload-launcher">
+          <div id="dropzoneIdle" class="dropzone-body">
+            <button type="button" id="pickFileBtn" class="primary dropzone-pick">上传未绑定网格体</button>
+          </div>
+          <div id="dropzoneReady" class="dropzone-body hidden" aria-hidden="true"></div>
+          <input type="file" id="fileInput" class="file-input-hidden" accept=".glb,.gltf,.obj,.fbx,.ply,.stl" tabindex="-1" aria-hidden="true" />
+        </div>
+
+        <div id="uploadActions" class="upload-actions hidden">
+          <button type="button" id="reuploadBtn" class="secondary">重新上传</button>
+          <button type="button" id="confirmUploadBtn" class="primary">确认上传</button>
+        </div>
+        <p id="uploadStatus" class="info hidden" aria-live="polite"></p>
+      </div>
+
+      <div id="alignPanel" class="rig-panel mka-step hidden">
+        <div class="stage-actions">
+          <button type="button" id="autoAlignBtn" class="secondary">自动对齐</button>
+          <button type="button" id="resetAlignBtn" class="secondary">重设变换</button>
+          <button type="button" id="confirmAlignBtn" class="primary">确认对齐</button>
+        </div>
+        <div class="stage-toolbox align-toolbox">
+          <div class="mode-row">
+            <button type="button" id="alignModeTranslate" class="mode-btn active">平移</button>
+            <button type="button" id="alignModeRotate" class="mode-btn">旋转</button>
+            <button type="button" id="alignModeScale" class="mode-btn">缩放</button>
+          </div>
+          <div class="transform-inputs">
+            <p class="input-group-label">平移</p>
+            <div class="input-row">
+              <label>X</label><input type="number" id="alignTx" step="0.001" value="0" />
+              <label>Y</label><input type="number" id="alignTy" step="0.001" value="0" />
+              <label>Z</label><input type="number" id="alignTz" step="0.001" value="0" />
+            </div>
+            <p class="input-group-label">旋转（度）</p>
+            <div class="input-row">
+              <label>X</label><input type="number" id="alignRx" step="0.1" value="0" />
+              <label>Y</label><input type="number" id="alignRy" step="0.1" value="0" />
+              <label>Z</label><input type="number" id="alignRz" step="0.1" value="0" />
+            </div>
+            <p class="input-group-label">缩放</p>
+            <div class="input-row input-row-single">
+              <label>S</label><input type="number" id="alignScale" step="0.001" value="1" min="0.001" />
+            </div>
+          </div>
+        </div>
+        <p id="alignStatus" class="info hidden" aria-live="polite"></p>
+      </div>
+
+      <div id="bindStepSection" class="mka-step hidden" aria-hidden="true">
+        <button id="bindBtn" class="primary hidden" disabled>开始骨架绑定</button>
+        <p id="jobStatus" class="info hidden" aria-live="polite"></p>
+      </div>
+
+      <div id="confirmPanel" class="mka-step hidden" aria-hidden="true">
+        <button type="button" id="acceptSkeletonBtn" class="hidden">确认骨架</button>
+        <p id="confirmStatus" class="info hidden"></p>
+      </div>
+
+      <div id="somaEditPanel" class="rig-panel mka-step hidden">
+        <div class="stage-actions">
+          <button type="button" id="resetSomaBtn" class="secondary">重设变换</button>
+          <button type="button" id="confirmSomaBtn" class="primary">确认变换</button>
+        </div>
+        <div class="stage-toolbox soma-toolbox">
+          <div class="mode-row">
+            <button type="button" id="somaModeTranslate" class="mode-btn active">平移</button>
+            <button type="button" id="somaModeRotate" class="mode-btn">旋转</button>
+            <button type="button" id="somaModeScale" class="mode-btn">缩放</button>
+          </div>
+          <div class="mode-row">
+            <button type="button" id="somaSpaceLocal" class="mode-btn active">局部轴</button>
+            <button type="button" id="somaSpaceWorld" class="mode-btn">世界轴</button>
+          </div>
+          <p id="somaSelectedBone" class="info">未选择骨骼</p>
+        </div>
+        <p id="somaEditStatus" class="info hidden" aria-live="polite"></p>
+      </div>
+
+      <div id="rigPanel" class="rig-panel mka-step hidden">
+        <div class="stage-actions">
+          <button type="button" id="confirmSkinBtn" class="primary" data-i18n="bind.ik.confirmSkin">确认蒙皮</button>
+          <button type="button" id="resetPose" class="primary">重设姿态</button>
+        </div>
+        <div class="stage-toolbox skin-toolbox">
+          <label class="slider-row">
+            <span>模型透明度</span>
+            <input type="range" id="meshOpacity" min="5" max="100" value="85" />
+          </label>
+          <div class="mode-row">
+            <button type="button" id="modeTranslate" class="mode-btn active">平移</button>
+            <button type="button" id="modeRotate" class="mode-btn">旋转</button>
+            <button type="button" id="modeScale" class="mode-btn">缩放</button>
+          </div>
+          <p id="selectedBone" class="info">未选择骨骼</p>
+          <p class="input-group-label">蒙皮权重修正</p>
+          <div class="mode-row">
+            <button type="button" id="weightPaintBtn" class="mode-btn">增加权重</button>
+            <button type="button" id="weightEraseBtn" class="mode-btn">擦除权重</button>
+            <button type="button" id="cancelWeightToolBtn" class="mode-btn">取消工具</button>
+          </div>
+          <label class="slider-row">
+            <span>画笔大小</span>
+            <input type="range" id="weightBrushRadius" min="1" max="100" value="15" />
+          </label>
+          <label class="slider-row">
+            <span>画笔力度</span>
+            <input type="range" id="weightBrushStrength" min="1" max="100" value="25" />
+          </label>
+        </div>
+        <p id="weightEditStatus" class="info hidden" aria-live="polite"></p>
+        <a id="downloadLink" class="download hidden" download="binding.npz">下载 binding.npz</a>
+      </div>
+
+      <div id="ikPanel" class="rig-panel mka-step hidden">
+        <div class="stage-actions">
+          <button type="button" id="autoIkBtn" class="primary" data-i18n="bind.ik.auto">自动IK</button>
+          <button type="button" id="finishIkBtn" class="primary hidden" data-i18n="bind.ik.saveNew">确认IK并保存角色</button>
+        </div>
+        <div class="stage-toolbox ik-toolbox">
+          <p class="input-group-label" data-i18n="bind.ik.solver">IK 求解器</p>
+          <div id="ikSolverToggle" class="mode-row hidden">
+            <button type="button" id="ikTwoBoneSolver" class="mode-btn active" data-i18n="bind.ik.twoBone">Two-Bone IK</button>
+            <button type="button" id="ikFullBodySolver" class="mode-btn" data-i18n="bind.ik.fullBody">全身 IK</button>
+          </div>
+          <p class="input-group-label" data-i18n="bind.ik.previewMode">预览模式</p>
+          <div id="ikPreviewToggle" class="mode-row hidden">
+            <button type="button" id="ikSkeletonMode" class="mode-btn active" data-i18n="bind.ik.skeleton">骨骼</button>
+            <button type="button" id="ikControlMode" class="mode-btn" data-i18n="bind.ik.controls">IK控制</button>
+          </div>
+          <p id="ikSelectedControl" class="info" data-i18n="bind.ik.none">未选择IK控制器</p>
+          <div id="ikTransformTools" class="hidden">
+            <p class="input-group-label" data-i18n="bind.ik.operation">操作</p>
+            <div class="mode-row">
+              <button type="button" id="ikModeTranslate" class="mode-btn active" data-i18n="bind.mode.translate">移动</button>
+              <button type="button" id="ikModeRotate" class="mode-btn" data-i18n="bind.mode.rotate">旋转</button>
+            </div>
+            <div class="mode-row">
+              <button type="button" id="ikSpaceLocal" class="mode-btn" data-i18n="bind.space.local">局部</button>
+              <button type="button" id="ikSpaceWorld" class="mode-btn active" data-i18n="bind.space.world">世界</button>
+            </div>
+          </div>
+          <div id="fullBodySettings" class="ik-settings hidden">
+            <label><span data-i18n="bind.ik.rootBehavior">根骨骼行为</span>
+              <select id="fullBodyRootBehavior">
+                <option value="pre_pull" data-i18n="bind.ik.rootPrePull">预拉伸</option>
+                <option value="pin_to_input" data-i18n="bind.ik.rootPinned">固定到输入姿势</option>
+                <option value="free" data-i18n="bind.ik.rootFree">自由</option>
+              </select>
+            </label>
+            <label><span data-i18n="bind.ik.iterations">迭代次数</span><input id="fullBodyIterations" type="number" min="1" max="60" value="20" /></label>
+          </div>
+          <div class="ik-profile-summary">
+            <span data-i18n="bind.ik.profileSummary">Two-Bone + Full Body IK</span>
+            <span data-i18n="bind.ik.limbs">双臂 · 双腿</span>
+            <span data-i18n="bind.ik.faceExcluded">嘴部与眼球已排除</span>
+          </div>
+          <div class="mode-row">
+            <button type="button" id="resetIkPreview" class="mode-btn hidden" data-i18n="bind.ik.reset">重置IK预览</button>
+          </div>
+        </div>
+        <p id="ikStatus" class="info" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="viewport-wrap">
+      <canvas id="viewport"></canvas>
+      <div id="viewportInfo" class="viewport-info hidden" aria-live="polite"></div>
+      <div id="autoRiggingOverlay" class="auto-rigging-overlay hidden" aria-live="polite">
+        <div class="auto-rigging-card">
+          <div class="auto-rigging-spinner"></div>
+          <strong id="autoRiggingTitle">自动骨骼生成中</strong>
+          <span id="autoRiggingStage" class="hidden" aria-hidden="true"></span>
+          <div class="auto-rigging-progress"><i id="autoRiggingProgressBar"></i></div>
+          <b id="autoRiggingProgressText">0%</b>
+        </div>
+      </div>
+      <div id="viewToolbar" class="view-toolbar">
+        <button type="button" id="viewFront" class="view-btn" data-i18n-title="bind.view.frontTitle" data-i18n="bind.view.front">前</button>
+        <button type="button" id="viewSide" class="view-btn" data-i18n-title="bind.view.sideTitle" data-i18n="bind.view.side">侧</button>
+        <button type="button" id="viewTop" class="view-btn" data-i18n-title="bind.view.topTitle" data-i18n="bind.view.top">顶</button>
+        <button type="button" id="viewPerspective" class="view-btn active" data-i18n-title="bind.view.perspTitle" data-i18n="bind.view.persp">透</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (async () => {
+      const el = document.getElementById("health");
+      const prefix = window.MKA_API_PREFIX || "";
+      const ta = (s) => (window.MKA_I18N ? window.MKA_I18N.translateApi(s) : s);
+      const t = (k) => (window.MKA_I18N ? window.MKA_I18N.t(k) : k);
+      try {
+        const res = await fetch(`${prefix}/api/health`);
+        const data = await res.json();
+        el.textContent = ta(data.message);
+        el.className = "health " + (data.ok ? "ok" : "err");
+      } catch (e) {
+        el.textContent = t("bind.healthFail");
+        el.className = "health err";
+      }
+    })();
+    window.addEventListener("error", (e) => {
+      if (typeof e.filename === "string" && e.filename.includes("app.js")) {
+        const status = document.getElementById("uploadStatus");
+        const t = (k) => (window.MKA_I18N ? window.MKA_I18N.t(k) : k);
+        if (status) status.textContent = t("bind.engineFail");
+      }
+    }, true);
+  </script>
+  <script src="/static/i18n.js?v=motionbuilder-3"></script>
+  <script src="/static/upload_boot.js?v=motionbuilder-2"></script>
+  <script src="/static/export_rig.js?v=motionbuilder-1"></script>
+  <script type="module" src="/static/app.js?v=motionbuilder-11"></script>
+</body>
+</html>

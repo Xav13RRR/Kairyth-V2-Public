@@ -1,0 +1,31 @@
+# Keep first-party Python/JavaScript visible in language statistics.
+GVHMR/** linguist-vendored
+hybrik_runtime/** linguist-vendored
+kimodo_runtime/** linguist-vendored
+third_party/** linguist-vendored
+motionbuilder_app/static/vendor/** linguist-vendored
+**/*.ipynb linguist-documentation
+docs/** linguist-documentation
+licenses/** linguist-documentation
+
+# Fixed-release font licence evidence must retain its exact upstream bytes.
+motionbuilder_app/static/fonts/Geist-OFL.txt -text
+motionbuilder_app/static/fonts/Geist-LICENSE.txt -text
+
+# User-authorized original SVG evidence is byte-pinned across checkout platforms.
+motionbuilder_app/static/kairyth_wordmark_clean.svg -text
+motionbuilder_app/static/grs_cube_vectorized_white.svg -text
+
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+.gitattributes text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf

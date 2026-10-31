@@ -1,0 +1,18 @@
+# Kairyth imports HybrIK in runtime/python (Python 3.10).
+# Install a matching torch/torchvision pair first; see docs/DEPLOYMENT_EN.md.
+# These are inference dependencies, not the upstream legacy training environment.
+numpy
+six
+terminaltables
+scipy
+cython
+opencv-python>=4.8,<5
+matplotlib
+pycocotools
+tqdm
+easydict
+chumpy==0.70
+pyyaml
+future
+ffmpeg-python
+joblib

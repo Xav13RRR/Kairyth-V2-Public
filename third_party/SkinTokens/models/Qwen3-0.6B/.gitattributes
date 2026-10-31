@@ -1,0 +1,3 @@
+# V2 change (2026-10-31): tokenizer is stored as ordinary Git bytes, not an
+# unresolved pointer. No upstream LFS objects/history are inherited.
+tokenizer.json -filter -diff -merge -text

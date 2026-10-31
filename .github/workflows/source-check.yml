@@ -1,0 +1,97 @@
+name: Source and publication checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Credential and generated-file hygiene
+        run: python scripts/check_publication.py --history
+      - name: Install CPU-only service test dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Run first-party synthetic tests
+        run: python -m pytest -q tests --ignore=tests/test_v2_detection_pipeline.py --ignore=tests/test_v2_wsl_cancel.py
+  detector-boundary-cpu:
+    # Detector integration applies only when its research sources are included.
+    # Report not-applicable when those sources are absent.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - name: Explicit research-integration scope after checkout
+        id: research_scope
+        shell: pwsh
+        run: |
+          $ready = (Test-Path 'GVHMR/tools/demo/demo.py' -PathType Leaf) -and (Test-Path 'detector_tool/cli.py' -PathType Leaf)
+          Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "available=$($ready.ToString().ToLowerInvariant())"
+          if (-not $ready) { Write-Host 'NOT APPLICABLE: research/detector source absent; no detector integration PASS is claimed.' }
+      - uses: actions/setup-python@v5
+        if: steps.research_scope.outputs.available == 'true'
+        with:
+          python-version: '3.10'
+      - name: Install service test dependencies then detector production-series CPU tensor pins
+        if: steps.research_scope.outputs.available == 'true'
+        run: |
+          python -m pip install -r requirements-dev.txt
+          python -m pip install torch==2.3.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==1.23.5 einops
+          python -m pip check
+      - name: Require detector synthetic dependencies (never silently skip)
+        if: steps.research_scope.outputs.available == 'true'
+        run: python -c "import torch,numpy,einops; assert torch.__version__.startswith('2.3.0'); assert numpy.__version__ == '1.23.5'"
+      - name: Run detector/cancellation/path synthetic tests without Ultralytics, models, codecs or WSL
+        if: steps.research_scope.outputs.available == 'true'
+        run: python -m pytest -q tests/test_v2_detection_pipeline.py tests/test_v2_wsl_cancel.py tests/test_task_cancellation.py tests/test_motion_store_paths.py
+  public-history-boundary:
+    # Require every reachable commit and ref to satisfy public-workbench rules.
+    # Artifact checks do not replace this history boundary.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Require public-workbench history and refs boundary (no continue-on-error)
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python scripts/check_publication.py --profile public-workbench --history
+  source-artifacts:
+    # Build fixed-inventory source artifacts and independently verify their bytes.
+    # Checkout-byte artifacts and immutable Git-blob snapshots have distinct provenance.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Build and independently check source-only candidates
+        shell: pwsh
+        run: |
+          foreach ($profile in @('public-workbench', 'standalone-detector')) {
+            if ($profile -eq 'standalone-detector' -and -not (Test-Path 'detector_tool/cli.py')) {
+              Write-Host 'Separate AGPL detector artifact is absent from this workbench checkout; no detector test/build claim.'
+              continue
+            }
+            $inventory = Join-Path $env:RUNNER_TEMP "$profile-inventory.json"
+            $archive = Join-Path $env:RUNNER_TEMP "$profile-source.zip"
+            python scripts/check_publication.py --profile $profile --write-candidate-manifest $inventory
+            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+            python scripts/check_publication.py --profile $profile --build-from $inventory --output-zip $archive
+            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+            python scripts/check_publication.py --profile $profile --artifact $archive --inventory $inventory
+            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          }

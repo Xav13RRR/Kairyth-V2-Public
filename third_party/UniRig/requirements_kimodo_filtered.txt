@@ -1,0 +1,12 @@
+transformers==4.51.3
+python-box
+einops
+omegaconf
+pytorch_lightning
+lightning
+addict
+timm
+fast-simplification
+trimesh
+pyrender
+huggingface_hub

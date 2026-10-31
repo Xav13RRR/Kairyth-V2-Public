@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KAIRYTH: Generative Motion Systems</title>
+  <link rel="icon" type="image/svg+xml" href="/app-static/grs_cube_vectorized_white.svg?v=1" />
+  <link rel="stylesheet" href="/app-static/studio.css?v=6" />
+  <link rel="stylesheet" href="/app-static/studio_v5.css?v=116-release-capabilities" />
+  <link rel="stylesheet" href="/app-static/terrain_workspace.css?v=2-terrain-layers" />
+  <link rel="stylesheet" href="/app-static/director_studio.css?v=6" />
+  <script type="importmap">{"imports":{"three":"/app-static/vendor/three/build/three.module.js","three/addons/":"/app-static/vendor/three/examples/jsm/"}}</script>
+</head>
+<body class="entry-locked">
+  <div id="entryGate" class="entry-gate" role="dialog" aria-modal="true" aria-label="Enter Kairyth">
+    <div class="entry-gate__stage">
+      <div class="entry-gate__identity">
+        <div class="entry-gate__wordmark" role="img" aria-label="KAIRYTH">
+          <span class="entry-gate__letter entry-gate__letter--k" aria-hidden="true"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="" /></span>
+          <span class="entry-gate__letter entry-gate__letter--a" aria-hidden="true"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="" /></span>
+          <span class="entry-gate__letter entry-gate__letter--i" aria-hidden="true"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="" /></span>
+          <span class="entry-gate__letter entry-gate__letter--r" aria-hidden="true"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="" /></span>
+          <span class="entry-gate__letter entry-gate__letter--y" aria-hidden="true"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="" /></span>
+          <span class="entry-gate__letter entry-gate__letter--t" aria-hidden="true"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="" /></span>
+          <span class="entry-gate__letter entry-gate__letter--h" aria-hidden="true"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="" /></span>
+        </div>
+        <p class="entry-gate__tagline">Motion, timed by intent.</p>
+      </div>
+      <div class="entry-gate__action">
+        <span class="entry-gate__line" aria-hidden="true"></span>
+        <button id="entryGateEnter" type="button">ENTER</button>
+        <span class="entry-gate__line" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+  <header class="topbar"><div class="topbar-logo"><span class="mark brand-mark"><img src="/app-static/kairyth_wordmark_clean.svg?v=1" alt="KAIRYTH" /></span><span class="brand-tagline">Motion, timed by intent</span></div><div class="topbar-system"><strong>BY G.R.S: GAME-READY SYSTEMS</strong><div id="health" class="health">STATUS:CHECK</div></div></header>
+  <nav class="tabs">
+    <button class="tab active" data-tab="assets">模型仓库</button>
+    <button class="tab" data-tab="pose-library">姿势仓库</button>
+    <button class="tab" data-tab="library">动作仓库</button>
+    <button class="tab" data-tab="rig">角色绑定与蒙皮</button>
+    <button class="tab" data-tab="motion">视频动作推理</button>
+    <button class="tab" data-tab="kimodo">文本动作生成</button>
+    <button class="tab" data-tab="retarget">动作重定向</button>
+    <button class="tab" data-tab="edit">最终动画构建</button>
+    <button class="tab" data-tab="director">导演仓库</button>
+    <div class="studio-language-switch" role="group" aria-label="Language">
+      <button id="studioLanguageZh" class="studio-language-tab active" type="button" data-language="zh" aria-label="切换至中文">中</button>
+      <button id="studioLanguageEn" class="studio-language-tab" type="button" data-language="en" aria-label="Switch to English">ENG</button>
+    </div>
+  </nav>
+  <main>
+    <section id="tab-assets" class="tabpage active">
+      <div class="page-title asset-title"><div><h1>资产导入与预处理</h1></div></div>
+      <div class="asset-action-row"><button id="goRig" class="primary">绑定新角色</button><button id="staticAssetButton" class="primary" type="button">导入静态资产</button><input id="staticAssetFile" name="model" type="file" accept=".glb,.gltf,.obj,.fbx,.ply,.stl" class="hidden" /></div>
+      <p id="staticAssetStatus" class="status asset-import-status"></p>
+      <div class="page-title asset-title asset-library-title"><div><h1>模型资产仓库管理</h1></div></div>
+      <div class="asset-filter-tabs"><button class="asset-filter-tab active" data-asset-filter="all">全部资产</button><button class="asset-filter-tab" data-asset-filter="rigged">角色资产</button><button class="asset-filter-tab" data-asset-filter="static">静态资产</button></div>
+      <div id="characterGrid" class="card-grid"></div>
+    </section>
+    <section id="tab-rig" class="tabpage rig-page"><iframe id="rigFrame" title="角色绑定与蒙皮" src="/rig-editor" scrolling="no"></iframe></section>
+    <section id="tab-motion" class="tabpage motion-inference-page">
+      <div class="page-title motion-inference-title"><div><h1>视频动作推理</h1></div></div>
+      <div class="motion-control-rail">
+        <form id="motionForm" class="motion-inference-form">
+          <input id="motionVideo" name="video" type="file" accept="video/mp4,video/quicktime,video/x-matroska,video/x-msvideo,video/webm,.mp4,.mov,.mkv,.avi,.webm,.m4v" class="hidden" required disabled />
+          <div class="motion-action-stack">
+            <button id="motionVideoButton" class="primary research-release-unavailable" type="button" disabled aria-disabled="true">上传视频</button>
+            <button id="motionSubmitBtn" class="primary hidden" type="submit" disabled>开始动作推理</button>
+          </div>
+          <p id="motionReleaseNotice" class="research-release-notice" role="status" aria-live="polite"><strong>正在检查</strong><span>正在读取发布能力…</span></p>
+          <p id="motionFormStatus" class="status"></p>
+        </form>
+        <section class="motion-task-panel">
+          <h2>视频动作仓库</h2>
+          <div id="motionList" class="motion-list"></div>
+        </section>
+      </div>
+      <div id="motionPreviewStage" class="motion-preview-stage native-mode">
+        <div id="motionPreviewInfo" class="motion-preview-info"></div>
+        <div id="nativeViewport"><canvas id="nativeCanvas"></canvas></div>
+        <div class="transport motion-native-transport"><button id="nativePlayBtn">▶</button><input id="nativeTimeline" type="range" min="0" max="0" value="0"/><span id="nativeFrameLabel">0 / 0</span></div>
+      </div>
+    </section>
+    <section id="tab-pose-library" class="tabpage">
+      <div class="page-title asset-title pose-title"><div><h1>姿势导入与生成</h1></div></div>
+      <div class="asset-action-row pose-action-row"><button id="poseImagePickBtn" class="primary research-release-unavailable" type="button" disabled aria-disabled="true">图片姿势推理</button><button id="poseImportExistingBtn" class="primary" type="button">导入已有姿势</button><button id="poseFromMotionBtn" class="primary" type="button">从动作提取姿势</button><input id="poseImage" name="image" type="file" accept="image/*" class="hidden" disabled /><input id="poseExistingFile" type="file" accept=".npz,.json" class="hidden" /></div>
+      <p id="poseReleaseNotice" class="research-release-notice" role="status" aria-live="polite"><strong>正在检查</strong><span>正在读取发布能力…</span></p>
+      <div id="poseImageTaskList" class="pose-task-list hidden"></div>
+      <div id="imagePoseList" class="motion-list hidden"></div>
+      <div class="page-title asset-title asset-library-title pose-library-title"><div><h1>姿势资产仓库管理</h1></div></div>
+      <div id="poseLibraryGrid" class="card-grid"></div>
+    </section>
+    <section id="tab-kimodo" class="tabpage kimodo-studio-page">
+      <div class="page-title kimodo-studio-title"><div><h1>文本动作生成</h1></div></div>
+      <div class="kimodo-control-rail">
+        <form id="kimodoForm" class="kimodo-studio-form">
+          <label>动作名称<input id="kimodoName" maxlength="80" value="text_to_motion" required /></label>
+          <div class="segment-list" id="kimodoSegments"></div>
+          <button id="addKimodoSegment" type="button">添加提示词片段</button>
+          <div class="kimodo-control-box">
+            <label class="check"><input id="kimodoTrajectoryEnabled" type="checkbox" /> 打开航迹控制</label>
+            <div id="kimodoTrajectoryPanel" class="hidden">
+              <div id="kimodoTrajectoryPoints" class="edit-list"></div>
+              <button id="addKimodoTrajectoryPoint" type="button">添加航迹点</button>
+              <div id="kimodoWaypointPoseTools" class="kimodo-waypoint-pose-tools hidden">
+                <div class="kimodo-subhead">当前航迹点姿势编辑</div>
+                <label>骨骼节点<select id="kimodoWaypointPoseNode"></select></label>
+                <div class="kimodo-button-row"><button id="kimodoWaypointPoseTranslate" type="button">平移</button><button id="kimodoWaypointPoseRotate" type="button" class="active">旋转</button><button id="kimodoWaypointPoseReset" type="button">恢复库中姿势</button></div>
+                <p class="kimodo-inline-note">修改仅保存在本次生成设置中，不会覆盖姿势仓库资产。</p>
+              </div>
+            </div>
+          </div>
+          <details id="kimodoScenePanel" class="kimodo-authoring-section">
+            <summary>预览场景</summary>
+            <div class="row"><label>资产类型<select id="kimodoSceneKind"><option value="static_mesh">静态网格体</option><option value="terrain">地形</option></select></label><label>资产<select id="kimodoSceneAsset"></select></label></div>
+            <button id="kimodoSceneAdd" type="button" class="primary">添加到预览</button>
+            <div class="kimodo-button-row"><button id="kimodoSceneTranslate" type="button" class="active">平移</button><button id="kimodoSceneRotate" type="button">旋转</button><button id="kimodoSceneScale" type="button">整体缩放</button><button id="kimodoSceneReset" type="button">复位</button><button id="kimodoSceneDelete" type="button">删除</button></div>
+            <div id="kimodoSceneList" class="kimodo-scene-list"></div>
+          </details>
+          <p id="kimodoPoseStatus" class="hidden"></p>
+          <div class="row kimodo-generation-settings"><label>推理步数<input id="kimodoSteps" type="number" min="1" max="300" step="1" value="100" /></label><label>随机种子<input id="kimodoSeed" type="number" min="0" max="99999" step="1" value="12345" /></label></div>
+          <button id="kimodoSubmitBtn" class="primary" type="submit">开始生成</button><p id="kimodoStatus" class="status"></p>
+        </form>
+        <section class="kimodo-task-panel"><h2>文本动作仓库</h2><div id="kimodoList" class="motion-list"></div></section>
+      </div>
+      <div class="kimodo-preview-stage">
+        <div id="kimodoPreviewInfo" class="kimodo-preview-info"></div>
+        <div id="kimodoGizmoModes" class="kimodo-gizmo-modes hidden"><button id="kimodoTranslateMode" class="active" type="button">平移模式</button><button id="kimodoRotateMode" type="button">旋转模式</button></div>
+        <div id="kimodoAuthoringHint" class="kimodo-authoring-hint">航迹 Pose 与预览场景编辑</div>
+        <div id="kimodoViewport"><canvas id="kimodoCanvas"></canvas></div>
+        <div class="transport kimodo-native-transport"><button id="kimodoPlayBtn">▶</button><input id="kimodoTimeline" type="range" min="0" max="0" value="0"/><span id="kimodoFrameLabel">0 / 0</span></div>
+      </div>
+    </section>
+    <section id="tab-retarget" class="tabpage retarget-studio-page">
+      <div class="page-title retarget-studio-title"><div><h1>动作重定向</h1><p>只迁移父子局部旋转；固定 Hips 与所有目标骨长，绝不拉伸骨骼。</p></div></div>
+      <div class="two-col retarget-layout"><div class="retarget-control-rail"><form id="retargetForm" class="retarget-studio-form">
+        <label>动作来源<select id="retargetSourceKind"><option value="gvhmr">视频动作仓库</option><option value="kimodo">文本动作仓库</option></select></label>
+        <label>源动作<select id="retargetMotion" required></select></label>
+        <label>目标骨骼网格体<select id="retargetCharacter" required></select></label>
+        <label>动作名称<input id="retargetName" maxlength="80" value="重定向动作" required /></label>
+        <button class="primary" type="submit">生成重定向预览</button><button id="commitRetargetBtn" type="button" class="hidden">添加至动作库</button>
+      </form></div><div class="panel simple-preview-panel retarget-preview-stage"><div id="retargetStatus" class="retarget-preview-info"></div><div id="retargetViewport"><canvas id="retargetCanvas"></canvas></div><div class="transport retarget-native-transport"><button id="retargetPlayBtn">▶</button><input id="retargetTimeline" type="range" min="0" max="0" value="0"/><span id="retargetFrameLabel">0 / 0</span></div></div></div>
+    </section>
+    <section id="tab-virtual-root" class="tabpage">
+      <div class="page-title"><div><h1>Virtual Root Builder</h1><p>为动作生成统一的 ground / locomotion root：World → VirtualRoot → Hip / Pelvis。预览确认后再存为新的动作库条目。</p></div></div>
+      <div class="two-col virtual-root-layout">
+        <form id="virtualRootForm" class="panel form-panel">
+          <label>源动作<select id="virtualRootAnimation" required></select></label>
+          <label>新动作名称<input id="virtualRootName" maxlength="80" value="VirtualRoot 动作" required /></label>
+          <div class="row"><label>平滑帧数<input id="virtualRootSmooth" type="number" min="1" max="61" step="2" value="9" /></label><label>静止容差 / 帧<input id="virtualRootTolerance" type="number" min="0" max="0.2" step="0.001" value="0.005" /></label></div>
+          <p class="status">当前流程按项目标准 Y-up 计算。VirtualRoot 位于脚底最低基准面，Hip / Pelvis 的局部起伏与摆动会保留在其下方。</p>
+          <button class="primary" type="submit">生成 VirtualRoot 预览</button><button id="commitVirtualRootBtn" type="button" class="hidden">确认并存入动作库</button><p id="virtualRootStatus" class="status"></p>
+        </form>
+        <div class="panel simple-preview-panel"><div id="virtualRootViewport"><canvas id="virtualRootCanvas"></canvas></div><div class="transport"><button id="virtualRootPlayBtn">▶</button><input id="virtualRootTimeline" type="range" min="0" max="0" value="0"/><span id="virtualRootFrameLabel">0 / 0</span></div></div>
+      </div>
+    </section>
+    <section id="tab-library" class="tabpage">
+      <div class="page-title asset-title animation-title"><div><h1>动作文件处理</h1></div></div>
+      <div class="asset-action-row animation-action-row"><button id="upperLowerComposeBtn" class="primary">动画合成</button><button id="additiveComposeBtn" class="primary" type="button">加法动画叠加</button><button id="animationAdjustBtn" class="primary" type="button">动画调整</button><button id="libraryVirtualRootBtn" class="primary" type="button">VIRTUALROOT 构建</button><button id="gaitIKBtn" class="primary" type="button">IK 步态、贴地与滑步</button></div>
+      <div class="page-title asset-title asset-library-title animation-library-title"><div><h1>动作资产仓库管理</h1></div></div>
+      <div class="animation-filter-bar"><div class="asset-filter-tabs animation-kind-tabs"><button class="asset-filter-tab active" data-animation-kind-filter="all">全部动作</button><button class="asset-filter-tab" data-animation-kind-filter="virtual">VIRTUALROOT</button><button class="asset-filter-tab" data-animation-kind-filter="normal">普通动作</button></div><div id="animationCharacterFilters" class="asset-filter-tabs animation-character-tabs"></div></div>
+      <div id="animationGrid" class="card-grid"></div>
+    </section>
+    <section id="tab-edit" class="tabpage final-editor-page">
+      <div class="page-title final-editor-title"><div><h1>最终动画构建</h1></div></div>
+      <div class="final-control-rail">
+        <aside class="panel timeline-panel">
+          <div id="editorModeSelector" class="editor-mode-selector">
+            <button id="importModeBtn" data-editor-mode="import">动作导入模式</button><button id="clipProcessModeBtn" data-editor-mode="clip" disabled>片段处理模式</button><button id="attachmentModeBtn" data-editor-mode="component" disabled>组件添加模式</button>
+          </div>
+          <div id="compositionTools" class="editor-tool-section">
+            <h2>时间轴构建</h2><div id="segmentList" class="segment-list"></div>
+          </div>
+          <div id="editorModePanels" class="editor-mode-panels">
+            <div id="importModePanel" class="editor-mode-panel hidden">
+              <h2>动作导入模式</h2>
+              <label>选择角色<select id="editCharacter"></select></label><label>选择动画<select id="editAnimation"></select></label>
+              <div class="editor-import-actions"><button id="previewAnimationBtn">预览所选动作</button><button id="addSegmentBtn" class="primary">添加到时间轴</button></div>
+              <button id="exitImportModeBtn" class="editor-danger">退出动作导入模式</button>
+            </div>
+            <div id="clipProcessPanel" class="editor-mode-panel hidden">
+              <h2>片段处理模式</h2>
+              <div class="row"><label>删除开始帧（包含）<input id="cutStart" type="number" min="0" value="0"/></label><label>删除结束帧（不包含）<input id="cutEnd" type="number" min="0" value="0"/></label></div>
+              <div class="clip-process-actions"><button id="deleteRangeBtn">删除帧</button><button id="splitFrameBtn">截断动画</button></div><button id="exitClipProcessModeBtn" class="editor-danger">退出片段处理模式</button>
+            </div>
+            <div id="attachmentPanel" class="editor-mode-panel component-mode-panel hidden">
+              <h2>组件添加模式</h2>
+              <label>静态网格体<select id="attachmentAssetSelect"></select></label>
+              <button id="attachToBoneBtn" class="primary">添加组件到选中骨骼</button>
+              <div class="mode-row"><button id="attachmentTranslate" class="mode-btn active">平移</button><button id="attachmentRotate" class="mode-btn">旋转</button><button id="attachmentScale" class="mode-btn">整体缩放</button></div>
+              <div id="attachmentList" class="edit-list"></div>
+              <div class="component-final-actions"><button id="applyAttachmentsBtn" class="primary">确认组件</button><button id="cancelAttachmentsBtn" class="editor-danger">退出但不应用</button></div>
+            </div>
+            <div id="boneRepairPanel" class="editor-mode-panel hidden">
+              <h2>骨骼修复模式</h2>
+              <div class="mode-row ik-pose-mode-row"><button id="finalPoseFK" class="mode-btn active">骨骼</button><button id="finalPoseIK" class="mode-btn">IK</button></div>
+              <div id="finalIKSolverRow" class="ik-solver-row hidden"><label>IK 解算器<select id="finalIKSolver"><option value="two_bone">Two-Bone IK</option><option value="full_body">全身 IK</option></select></label><small id="finalIKControlInfo">Two-Bone IK · 双臂、双腿</small></div>
+              <label>骨骼<select id="jointSelect"></select></label><div class="mode-row"><button id="gizmoTranslate" class="mode-btn active">平移</button><button id="gizmoRotate" class="mode-btn">旋转</button></div><div class="mode-row"><button id="gizmoLocal" class="mode-btn active">局部轴</button><button id="gizmoWorld" class="mode-btn">世界轴</button></div><button id="finalResetIK" type="button" class="hidden">重置 IK 预览</button><label>作用范围<select id="editScope"><option value="frame">当前关键帧</option><option value="range">帧区间</option><option value="all">整段动画</option></select></label>
+              <div class="row"><label>开始帧<input id="startFrame" type="number" min="0" value="0"/></label><label>结束帧<input id="endFrame" type="number" min="0" value="0"/></label></div><div class="row"><label>前过渡帧<input id="blendInFrames" type="number" min="0" max="120" value="5"/></label><label>后过渡帧<input id="blendOutFrames" type="number" min="0" max="120" value="5"/></label></div>
+              <fieldset><legend>局部位移（米）</legend><div class="xyz"><input id="tx" type="number" step="0.01" value="0"/><input id="ty" type="number" step="0.01" value="0"/><input id="tz" type="number" step="0.01" value="0"/></div></fieldset>
+              <fieldset><legend>局部旋转（度）</legend><div class="xyz"><input id="rx" type="number" step="1" value="0"/><input id="ry" type="number" step="1" value="0"/><input id="rz" type="number" step="1" value="0"/></div></fieldset>
+              <div class="mode-row bone-edit-actions"><button id="addEditBtn" class="primary">添加修复</button><button id="clearEditsBtn" class="editor-danger">清除修复</button></div><div id="editList" class="edit-list"></div><button id="exitBoneRepairModeBtn">退出骨骼修复模式</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="preview-stack panel final-preview-stage"><span id="currentUpAxis" class="axis-pill final-preview-axis hidden">Current Up Axis: Y</span><p id="editorStatus" class="status final-preview-info"></p><div id="viewport"><canvas id="sceneCanvas"></canvas><span class="viewport-help">点击骨骼节点选择 · 拖拽 Gizmo 调整 · 滚轮缩放</span></div><div class="timeline-dock"><div id="timelineDockResizeHandle" class="timeline-dock-resize-handle" role="separator" aria-orientation="horizontal" aria-label="拖动调整总体时间轴高度" title="拖动调整总体时间轴高度"></div><div class="timeline-dock-scroll"><div id="timelineTrack" class="timeline-track"><i id="timelinePlayhead"></i></div><div class="transport"><button id="playBtn">▶</button><input id="timeline" type="range" min="0" max="0" value="0"/><span id="frameLabel">0 / 0 · 00:00.000</span></div></div></div></div>
+    </section>
+    <section id="tab-director" class="tabpage director-page">
+      <div class="page-title asset-title director-title"><div><h1>导演场景创建与编辑</h1></div></div>
+      <div class="asset-action-row director-action-row">
+        <button id="directorCreateBtn" class="primary" type="button">新建导演工程</button>
+        <button id="directorRefreshBtn" type="button">刷新导演仓库</button>
+      </div>
+      <p id="directorWarehouseStatus" class="status director-warehouse-status"></p>
+      <div class="page-title asset-title asset-library-title director-library-title"><div><h1>导演资产仓库管理</h1></div></div>
+      <div id="directorProjectGrid" class="card-grid director-project-grid"></div>
+    </section>
+  </main>
+  <div id="directorEditorModal" class="director-editor-modal hidden" role="dialog" aria-modal="true" aria-label="导演与镜头构建">
+    <div class="director-editor-shell">
+      <header class="director-editor-head">
+        <div class="director-project-identity"><span>导演与镜头构建</span><input id="directorProjectName" maxlength="120" value="未命名导演工程" aria-label="导演工程名称" /></div>
+        <div class="director-head-actions"><span class="director-language-switch" role="group" aria-label="Language"><button id="directorLanguageZh" type="button" aria-label="切换至中文">中</button><button id="directorLanguageEn" type="button" aria-label="Switch to English">ENG</button></span><button id="directorUndoBtn" type="button">撤销</button><button id="directorRedoBtn" type="button">重做</button><button id="directorSnapshotBtn" type="button">版本快照</button><button id="directorSaveBtn" class="primary" type="button">保存工程</button><button id="directorCloseBtn" type="button">关闭</button></div>
+      </header>
+      <div class="director-editor-body">
+        <aside class="director-outliner panel">
+          <h2>场景组件</h2>
+          <details open><summary>导入骨骼网格体动画</summary><label>骨骼网格体<select id="directorCharacterSelect"></select></label><label>网格体动画<select id="directorAnimationSelect"></select></label><label class="check"><input id="directorRootMotionEnabled" type="checkbox" /> 启用根运动（显示轨迹）</label><button id="directorAddActorBtn" class="primary" type="button">添加人物动画</button></details>
+          <details><summary>导入场景资产</summary><label>资产类型<select id="directorAssetKind"><option value="static_mesh">静态网格体</option><option value="terrain">地形</option></select></label><label>资产<select id="directorAssetSelect"></select></label><button id="directorAddAssetBtn" class="primary" type="button">添加到场景</button></details>
+          <div class="director-create-row"><button id="directorAddCameraBtn" class="primary" type="button">增加机位</button><button id="directorAddPathBtn" type="button">增加相机轨道</button></div>
+          <div id="directorOutlinerList" class="director-outliner-list"></div>
+        </aside>
+        <section class="director-stage panel">
+          <div id="directorViewport" class="director-viewport">
+            <canvas id="directorCanvas"></canvas>
+            <canvas id="directorCameraPreview" class="director-camera-preview"></canvas>
+            <span id="directorCameraPreviewLabel" class="director-camera-preview-label">CAM</span>
+            <div id="directorGuideOverlay" class="director-guide-overlay">
+              <i class="director-safe-frame"></i><i class="director-center-h"></i><i class="director-center-v"></i>
+              <i class="director-third director-third-v one"></i><i class="director-third director-third-v two"></i><i class="director-third director-third-h one"></i><i class="director-third director-third-h two"></i>
+            </div>
+            <span id="directorViewportLabel" class="director-viewport-label">编辑视角</span>
+            <div class="director-viewport-toolbar"><button id="directorMoveBtn" class="active" type="button">平移</button><button id="directorRotateBtn" type="button">旋转</button><button id="directorScaleBtn" type="button">整体缩放</button><button id="directorLockViewBtn" type="button">导演视角</button><button id="directorFrameSelectedBtn" type="button">框选选中物体</button><button id="directorFrameActorsBtn" type="button">框选全部人物</button></div>
+          </div>
+          <div class="director-timeline-dock">
+            <div class="director-transport"><button id="directorPlayBtn" type="button">▶</button><input id="directorTimelineRange" type="range" min="0" max="299" value="0"/><span id="directorFrameLabel">1 / 300 · 00:00.000</span><label>FPS<input id="directorFps" type="number" min="1" max="120" step="1" value="30"/></label><label>总帧数<input id="directorDuration" type="number" min="1" max="2000000" step="1" value="300"/></label><label>画幅<select id="directorAspectPreset"><option>16:9</option><option>9:16</option><option>1:1</option><option>21:9</option></select></label><label>输出<select id="directorResolutionPreset"><option value="720p">720p</option><option value="1080p">1080p</option></select></label><label>代理<select id="directorPreviewQuality"><option value="0.25">25%</option><option value="0.5">50%</option><option value="0.75">75%</option><option value="1">100%</option></select></label></div>
+            <div class="director-timeline-toolbar"><button id="directorAddCutBtn" class="primary" type="button">添加 Camera Cut</button><button id="directorAddBlackoutBtn" type="button" disabled>添加黑幕片段</button><button id="directorAddMarkerBtn" type="button">添加时间轴标记</button><button id="directorAddWarpBtn" type="button">添加局部变速</button><button id="directorAddCameraKeyBtn" type="button">添加相机关键帧</button><button id="directorDeleteKeyBtn" type="button">删除当前关键帧</button><button id="directorRefreshThumbnailsBtn" type="button">刷新镜头缩略图</button></div>
+            <div id="directorTimeline" class="director-timeline"><i id="directorPlayhead"></i></div>
+          </div>
+        </section>
+        <aside class="director-inspector panel">
+          <h2>属性</h2>
+          <div id="directorInspectorEmpty" class="empty">在场景大纲或时间轴中选择对象</div>
+          <div id="directorInspector" class="hidden"></div>
+          <details class="director-guides" open><summary>构图辅助</summary><label class="check"><input id="directorGuideSafe" type="checkbox" checked/>安全框</label><label class="check"><input id="directorGuideCenter" type="checkbox"/>中心线</label><label class="check"><input id="directorGuideThirds" type="checkbox" checked/>三分线</label></details>
+          <details class="director-export-panel"><summary>导出</summary><button id="directorScreenshotBtn" type="button">导出当前截图</button><button id="directorVideoExportBtn" class="primary" type="button">导出导演视频</button><button id="directorContactSheetBtn" type="button">导出分镜联系表</button><button id="directorReferencePackBtn" type="button">导出参考包</button><label class="check"><input id="directorExportDepth" type="checkbox"/>深度图</label><label class="check"><input id="directorExportNormal" type="checkbox"/>法线图</label><label class="check"><input id="directorExportSegmentation" type="checkbox"/>人物/场景分割图</label><div id="directorExportProgress" class="director-export-progress hidden"><span></span><i></i><small></small><div><button id="directorCancelExportBtn" type="button">取消导出</button><button id="directorResumeExportBtn" type="button" class="hidden">继续导出</button></div></div></details>
+          <p id="directorEditorStatus" class="status"></p>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <div id="animationPreviewModal" class="preview-modal hidden"><div class="preview-modal-card"><div class="editor-head"><strong id="modalPreviewTitle">动作预览</strong><button id="closePreviewModal">关闭</button></div><div class="model-preview-layout"><aside id="modelPreviewTools" class="model-preview-tools hidden"><h3>预览控制</h3><div class="mode-row"><button id="modelPreviewFK" class="mode-btn active" type="button">骨骼</button><button id="modelPreviewIK" class="mode-btn" type="button">IK</button></div><div id="modelPreviewSolverRow" class="hidden"><label>IK 解算器<select id="modelPreviewSolver"><option value="two_bone">Two-Bone IK</option><option value="full_body">全身 IK</option></select></label><small id="modelPreviewIKInfo">Two-Bone IK · 双臂、双腿</small></div><div class="mode-row"><button id="modelPreviewTranslate" class="mode-btn active" type="button">平移</button><button id="modelPreviewRotate" class="mode-btn" type="button">旋转</button></div><label>坐标系<select id="modelPreviewSpace"><option value="local">局部坐标</option><option value="world">世界坐标</option></select></label><label>选中骨骼<select id="modelPreviewJoint"></select></label><p id="modelPreviewStatus" class="status">模型预览：请选择骨骼并进行平移或旋转。</p><button id="modelPreviewReset" type="button">一键复位预览</button></aside><div class="model-preview-stage"><div id="modalPreviewViewport"><canvas id="modalPreviewCanvas"></canvas></div><div class="transport"><button id="modalPreviewPlay">▶</button><input id="modalPreviewTimeline" type="range" min="0" max="0" value="0"/><span id="modalPreviewFrameLabel">0 / 0</span></div></div></div></div></div>
+  <div id="motionVideoPreviewModal" class="preview-modal hidden"><div class="preview-modal-card motion-video-preview-card"><div class="editor-head"><strong id="motionVideoPreviewTitle">视频预览</strong></div><div class="motion-video-preview-layout"><aside class="motion-upload-settings"><label>动作名称<input id="motionNameInput" form="motionForm" type="text" maxlength="80" required /></label><label>根运动<select form="motionForm" name="root_mode"><option value="world">世界运动</option><option value="locked">锁定根骨骼</option></select></label><label>焦距 mm（可选）<input form="motionForm" name="focal_length" type="number" min="1" max="1000" /></label><label class="check"><input form="motionForm" name="static_camera" type="checkbox" /> 静态相机视频</label></aside><div class="motion-video-preview-body"><video id="motionUploadPreview" controls muted playsinline></video></div></div><div class="motion-video-preview-actions"><button id="motionStartInferenceBtn" class="primary" type="button" disabled>开始推理</button><button id="motionCancelUploadBtn" type="button">取消上传</button></div><p id="motionVideoPreviewStatus" class="status"></p></div></div>
+  <div id="poseImagePreviewPanel" class="preview-modal hidden"><div class="preview-modal-card pose-import-card"><div class="editor-head"><strong id="poseImportTitle">图片姿势推理</strong></div><div class="pose-import-modal-body"><img id="poseImagePreview" class="pose-image-preview" alt="图片预览" /></div><div class="pose-import-controls"><button id="runPoseInferenceBtn" class="primary" type="button" disabled>进行推理</button><button id="renamePoseImportBtn" type="button">重命名</button><button id="cancelPoseImportBtn" type="button">取消导入</button></div><p id="poseImageStatus" class="status"></p></div></div>
+  <div id="poseFromMotionModal" class="preview-modal hidden"><div class="preview-modal-card pose-from-motion-card"><div class="editor-head"><strong>从动作提取姿势</strong></div><div class="pose-from-motion-layout"><form id="poseFromMotionForm" class="pose-from-motion-form"><label>动作来源<select id="poseFromMotionKind"><option value="kimodo">文本生成动作</option><option value="video">视频推理动作</option></select></label><label>动作文件<select id="poseFromMotionSelect" required><option value="">暂无可预览动作</option></select></label><label>Pose 名称<input id="poseFromMotionName" maxlength="80" required /></label><div class="pose-from-motion-frame-readout"><span>当前帧</span><strong id="poseFromMotionCurrentFrame">0 / 0</strong></div><p id="poseFromMotionStatus" class="status"></p><div class="pose-from-motion-actions"><button id="exportPoseFromMotionBtn" class="primary" type="submit" disabled>导出当前帧</button><button id="cancelPoseFromMotionBtn" type="button">取消</button></div></form><div class="pose-from-motion-preview"><div id="poseFromMotionViewport"><canvas id="poseFromMotionCanvas"></canvas></div><div class="transport"><button id="poseFromMotionPlayBtn" type="button">▶</button><input id="poseFromMotionTimeline" type="range" min="0" max="0" value="0"/><span id="poseFromMotionFrameLabel">0 / 0</span></div></div></div></div></div>
+  <div id="poseEditModal" class="preview-modal hidden"><div class="preview-modal-card pose-edit-card"><div class="editor-head"><strong id="poseEditTitle">姿势编辑</strong><button id="closePoseEditModal">关闭</button></div><div class="pose-edit-layout"><div id="poseEditViewport"><canvas id="poseEditCanvas"></canvas><div id="poseViewButtons" class="pose-view-buttons"><button type="button" data-pose-view="front" title="Front">F</button><button type="button" data-pose-view="side" title="Side">S</button><button type="button" data-pose-view="top" title="Top">T</button><button type="button" data-pose-view="perspective" class="active" title="Perspective">P</button></div></div><aside class="pose-edit-side"><label>选中骨骼<select id="poseEditJointSelect"></select></label><label>新 Pose 名称<input id="poseEditName" maxlength="80" value="Edited Pose" /></label><p id="poseEditStatus" class="status"></p><button id="savePoseEditBtn" class="primary">保存为新 Pose</button><button id="cancelPoseEditBtn">取消</button></aside></div></div></div>
+  <div id="upperLowerModal" class="preview-modal hidden"><div class="preview-modal-card upper-lower-card"><div class="editor-head"><strong>动画合成</strong><button id="closeUpperLowerModal">关闭</button></div><div class="upper-lower-layout"><form id="upperLowerForm" class="upper-lower-form"><label>骨骼网格体<select id="upperLowerCharacter" required></select></label><label>上半身动画<select id="upperLowerUpper" required></select></label><label>下半身动画<select id="upperLowerLower" required></select></label><label>合成总时长 / 秒<input id="upperLowerDuration" type="number" min="0.1" max="120" step="0.1" value="3" required /></label><label>新动画名称<input id="upperLowerName" maxlength="80" value="合成动画" required /></label><button class="primary" type="submit">生成合成预览</button><button id="commitUpperLowerBtn" type="button" class="hidden">存入动作库</button><p id="upperLowerStatus" class="status"></p></form><div class="upper-lower-preview"><div id="upperLowerViewport"><canvas id="upperLowerCanvas"></canvas></div><div class="transport"><button id="upperLowerPlayBtn">▶</button><input id="upperLowerTimeline" type="range" min="0" max="0" value="0"/><span id="upperLowerFrameLabel">0 / 0</span></div></div></div></div></div>
+  <div id="additiveModal" class="preview-modal hidden"><div class="preview-modal-card upper-lower-card"><div class="editor-head"><strong>全身加法动画叠加</strong><button id="closeAdditiveModal">关闭</button></div><div class="upper-lower-layout"><form id="additiveForm" class="upper-lower-form additive-form"><label>骨骼网格体<select id="additiveCharacter" required></select></label><label>基础动画（决定输出长度）<select id="additiveBase" required></select></label><label>加法动画层<select id="additiveLayer" required></select></label><div class="additive-number-grid"><label>基础动画速率<input id="additiveBaseSpeed" type="number" min="0.05" max="4" step="0.05" value="1" required /></label><label>加法层速率<input id="additiveLayerSpeed" type="number" min="0.05" max="4" step="0.05" value="1" required /></label><label>叠加强度<input id="additiveWeight" type="number" min="0" max="2" step="0.05" value="1" required /></label><label>层结束行为<select id="additiveEndBehavior"><option value="loop">循环</option><option value="hold">保持最后一帧</option></select></label></div><label>参考姿势<select id="additiveReferenceType"><option value="first_frame">加法动画首帧</option><option value="animation_frame">加法动画指定帧</option><option value="ref_pose">骨骼绑定姿势</option></select></label><label id="additiveReferenceFrameRow" class="hidden">参考帧<input id="additiveReferenceFrame" type="number" min="0" step="1" value="0" /></label><label>新动画名称<input id="additiveName" maxlength="80" value="加法叠加动画" required /></label><p class="status additive-note">输出长度跟随调速后的基础动画；加法层会按所选速率循环或保持。</p><button class="primary" type="submit">生成加法叠加预览</button><button id="commitAdditiveBtn" type="button" class="hidden">存为新动画</button><p id="additiveStatus" class="status"></p></form><div class="upper-lower-preview"><div id="additiveViewport"><canvas id="additiveCanvas"></canvas></div><div class="transport"><button id="additivePlayBtn">▶</button><input id="additiveTimeline" type="range" min="0" max="0" value="0"/><span id="additiveFrameLabel">0 / 0</span></div></div></div></div></div>
+  <div id="libraryVirtualRootModal" class="preview-modal hidden"><div class="preview-modal-card library-virtual-root-card"><div class="editor-head"><strong>VIRTUALROOT 构建</strong><button id="closeLibraryVirtualRootModal">关闭</button></div><div class="library-virtual-root-layout"><form id="libraryVirtualRootForm" class="library-virtual-root-form"><label>骨骼网格体<select id="libraryVirtualRootCharacter" required></select></label><label>源动作<select id="libraryVirtualRootAnimation" required></select></label><label>新动作名称<input id="libraryVirtualRootName" maxlength="80" value="VirtualRoot 动作" required /></label><div class="row"><label>平滑帧数<input id="libraryVirtualRootSmooth" type="number" min="1" max="61" step="2" value="9" /></label><label>静止容差 / 帧<input id="libraryVirtualRootTolerance" type="number" min="0" max="0.2" step="0.001" value="0.005" /></label></div><button class="primary" type="submit">生成VIRTUALROOT</button><button id="commitLibraryVirtualRootBtn" type="button" class="hidden">确认并存入动作库</button><button id="replaceLibraryVirtualRootBtn" type="button" class="hidden">确认并替换原动作</button><p id="libraryVirtualRootStatus" class="status"></p></form><div class="library-virtual-root-preview"><div id="libraryVirtualRootViewport"><canvas id="libraryVirtualRootCanvas"></canvas></div><div class="transport"><button id="libraryVirtualRootPlayBtn">▶</button><input id="libraryVirtualRootTimeline" type="range" min="0" max="0" value="0"/><span id="libraryVirtualRootFrameLabel">0 / 0</span></div></div></div></div></div>
+  <div id="animationAdjustModal" class="preview-modal hidden"><div class="preview-modal-card animation-adjust-card"><div class="editor-head"><strong>动画调整</strong><button id="closeAnimationAdjustModal">关闭</button></div><div class="animation-adjust-layout"><form id="animationAdjustForm" class="animation-adjust-form"><label>骨骼网格体<select id="animationAdjustCharacter" required></select></label><label>动作文件<select id="animationAdjustAnimation" required></select></label><div class="mode-row ik-pose-mode-row"><button id="animationAdjustPoseFK" class="mode-btn active" type="button">骨骼</button><button id="animationAdjustPoseIK" class="mode-btn" type="button">IK</button></div><div id="animationAdjustSolverRow" class="ik-solver-row hidden"><label>IK 解算器<select id="animationAdjustSolver"><option value="two_bone">Two-Bone IK</option><option value="full_body">全身 IK</option></select></label><small id="animationAdjustControlInfo">Two-Bone IK · 双臂、双腿</small></div><div class="mode-row"><button id="animationAdjustTranslate" class="mode-btn active" type="button">平移</button><button id="animationAdjustRotate" class="mode-btn" type="button">旋转</button></div><label>坐标系<select id="animationAdjustSpace"><option value="local">局部坐标</option><option value="world">世界坐标</option></select></label><div class="animation-adjust-joint-row"><label>选中骨骼<select id="animationAdjustJoint"></select></label><button id="animationAdjustResetJoint" class="animation-adjust-orange" type="button">复位所选骨骼</button></div><button id="animationAdjustResetIK" class="animation-adjust-orange hidden" type="button">重置 IK 预览</button><p class="status ik-edit-note">当前帧用于确定整段动画的局部修正量。</p><div class="animation-adjust-cut-row"><button id="animationAdjustTrimBefore" type="button">从当前帧截断并丢弃前段</button><button id="animationAdjustTrimAfter" type="button">从当前帧截断并丢弃后段</button></div><label>动作名称<input id="animationAdjustName" maxlength="80" value="Adjusted Motion" required /></label><p id="animationAdjustStatus" class="status"></p><div class="pose-import-controls animation-adjust-save-row"><button id="animationAdjustUndo" class="animation-adjust-orange" type="button">撤回</button><button id="animationAdjustSaveNew" type="button">存为新动作</button><button id="animationAdjustOverwrite" type="button">覆盖原动作</button></div></form><div class="animation-adjust-preview"><div id="animationAdjustViewport"><canvas id="animationAdjustCanvas"></canvas></div><div class="transport"><button id="animationAdjustPlayBtn">▶</button><input id="animationAdjustTimeline" type="range" min="0" max="0" value="0"/><span id="animationAdjustFrameLabel">0 / 0</span></div></div></div></div></div>
+  <div id="gaitIKModal" class="preview-modal hidden"><div class="preview-modal-card gait-ik-card"><div class="editor-head"><strong>IK 步态、贴地与滑步控制</strong><button id="closeGaitIKModal">关闭</button></div><div class="gait-ik-layout"><form id="gaitIKForm" class="gait-ik-form"><label>骨骼网格体<select id="gaitIKCharacter" required></select></label><label>带根运动的动画<select id="gaitIKAnimation" required></select></label><label>新动画名称<input id="gaitIKName" maxlength="80" value="IK 步态动画" required /></label><div class="gait-ik-parameter-grid"><label>步幅倍率<input id="gaitIKStride" type="number" min="0.25" max="2.5" step="0.05" value="1" /></label><label>根运动路程倍率<input id="gaitIKRootDistance" type="number" min="0" max="3" step="0.05" value="1" /></label><label>脚锁定强度<input id="gaitIKFootLock" type="number" min="0" max="1" step="0.05" value="1" /></label><label>接触高度阈值 / 米<input id="gaitIKContactHeight" type="number" min="0.001" max="0.25" step="0.005" value="0.06" /></label><label>接触速度阈值 / 米每秒<input id="gaitIKContactVelocity" type="number" min="0.01" max="3" step="0.01" value="0.25" /></label><label>种植混合帧<input id="gaitIKPlantBlend" type="number" min="0" max="30" step="1" value="4" /></label><label>鞋底偏移 / 米<input id="gaitIKSoleOffset" type="number" min="-0.1" max="0.25" step="0.005" value="0" /></label><label>骨盆补偿上限 / 米<input id="gaitIKPelvisMax" type="number" min="0" max="0.5" step="0.005" value="0.12" /></label><label>骨盆平滑帧<input id="gaitIKPelvisSmooth" type="number" min="1" max="61" step="2" value="7" /></label><label class="check"><input id="gaitIKGroundRotation" type="checkbox" checked /> 脚部旋转贴合地面</label></div><p class="status gait-ik-note">处理前会把根运动垂直位置归一到 Y=0 地面基准；原动画不会被覆盖。</p><button class="primary" type="submit">生成 IK 步态预览</button><button id="commitGaitIKBtn" type="button" class="hidden">存为新动画</button><p id="gaitIKStatus" class="status"></p><div id="gaitIKMetrics" class="gait-ik-metrics hidden"></div></form><div class="gait-ik-preview"><div id="gaitIKViewport"><canvas id="gaitIKCanvas"></canvas><span id="gaitIKContactState" class="gait-contact-state">左脚：-- · 右脚：--</span></div><div class="transport"><button id="gaitIKPlayBtn" type="button">▶</button><input id="gaitIKTimeline" type="range" min="0" max="0" value="0"/><span id="gaitIKFrameLabel">0 / 0</span></div></div></div></div></div>
+  <script src="/app-static/entry_gate.js?v=1"></script>
+  <script src="/app-static/studio_i18n.js?v=20-release-capabilities"></script>
+  <script type="module" src="/app-static/terrain_workspace.js?v=1-terrain4"></script>
+  <script type="module" src="/app-static/studio.js?v=110-release-capabilities"></script>
+  <script type="module" src="/app-static/director_studio.js?v=8-director-layers"></script>
+</body>
+</html>

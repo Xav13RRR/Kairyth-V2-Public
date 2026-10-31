@@ -1,0 +1,86 @@
+# Kairyth local deployment/runtime state
+# V2: personal/research access does not grant redistribution permission.
+# Temporary publication hold, not a deletion or infringement finding.
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smpl/
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/
+/GVHMR/hmr4d/utils/body_model/
+/GVHMR/hmr4d/utils/smplx_utils.py
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smpl/lbs.py
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/vertex_joint_selector.py
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/vertex_ids.py
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/utils.py
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/lbs.py
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/joint_names.py
+/hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/body_models.py
+runtime/
+data/
+.pnpm-store/
+hybrik/
+model_files/
+
+# Installed Python/Conda environments
+third_party/envs/
+**/.venv/
+**/venv/
+
+# Model weights and licensed body models (download separately)
+GVHMR/inputs/checkpoints/
+GVHMR/outputs/
+GVHMR/inputs/webui/
+hybrik_runtime/pretrained_models/
+hybrik_runtime/model_files/
+hybrik_runtime/downloads/
+third_party/UniRig/experiments/
+third_party/UniRig/lightning_logs/
+third_party/SkinTokens/experiments/
+third_party/SkinTokens/.cache/
+kimodo_runtime/src/.mka_cache/
+kimodo_runtime/src/.kimodo/
+
+# Local staging exclusions (never part of the repository)
+**/.git-staging-excluded/
+**/webui-staging-excluded/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+**/hf_token
+*.pem
+*.key
+**/token
+**/stored_tokens
+**/credentials.json
+**/credentials.local.*
+**/.aws/
+**/.ssh/
+**/.cache/
+**/.mka_cache/
+**/.kimodo/
+/.agents/
+/.local-data/
+
+# Upstream demonstrations/results: fetched separately, never user test records
+/GVHMR/docs/example_video/
+/GVHMR/third-party/DPVO/logs/
+/hybrik_runtime/src/HybrIK/examples/
+/third_party/UniRig/examples/
+/third_party/SkinTokens/examples/
+/kimodo_runtime/src/kimodo/assets/demo/examples/
+
+# Generated files
+**/__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

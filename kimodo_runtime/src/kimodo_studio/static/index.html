@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="studio.title">Kimodo Studio — 动画生成</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/vendor/three/build/three.module.js",
+      "three/addons/": "/vendor/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Kimodo Studio</h1>
+    <p class="subtitle" data-i18n="studio.subtitle">自定义网格 · 文本驱动 · 动画生成</p>
+    <p id="health" class="health" data-i18n="studio.connecting">连接中…</p>
+  </header>
+  <script>
+    (function () {
+      const el = document.getElementById("health");
+      const t = (k, v) => (window.MKA_I18N ? window.MKA_I18N.t(k, v) : k);
+      fetch("/api/health")
+        .then((res) => (res.ok ? res.json() : Promise.reject(new Error(String(res.status)))))
+        .then((data) => {
+          if (!data.ok) throw new Error("health not ok");
+          const name = (data.binding || "").split(/[/\\]/).pop() || "binding";
+          el.textContent = t("studio.connected", { name });
+          el.className = "health ok";
+        })
+        .catch(() => {
+          el.textContent = t("studio.healthFail");
+          el.className = "health err";
+        });
+    })();
+  </script>
+  <main class="layout">
+    <section class="panel">
+      <div id="studioSetupSection" class="mka-step">
+      <h2 data-i18n="studio.timeline.title">时间轴</h2>
+      <div id="timelineSegments"></div>
+      <button type="button" id="addSegmentBtn" class="secondary" data-i18n="studio.timeline.add">添加片段</button>
+      <button type="button" id="saveTimelineBtn" class="secondary" data-i18n="studio.timeline.save">保存时间轴</button>
+      <p id="timelineStatus" class="info"></p>
+
+      <h2 data-i18n="studio.generate.title">生成</h2>
+      <button type="button" id="loadModelBtn" class="secondary" data-i18n="studio.generate.loadModel">加载模型</button>
+      <button type="button" id="generateBtn" class="primary" data-i18n="studio.generate.generate">生成动画</button>
+      <p id="generateStatus" class="info"></p>
+      </div>
+
+      <div id="studioPlaybackSection" class="mka-step hidden">
+      <h2 data-i18n="studio.playback.title">播放</h2>
+      <div class="mode-row">
+        <button type="button" id="playBtn" class="mode-btn" data-i18n="studio.playback.play">播放</button>
+        <button type="button" id="pauseBtn" class="mode-btn" data-i18n="studio.playback.pause">暂停</button>
+      </div>
+      <label class="slider-row"><span data-i18n="studio.playback.frame">帧</span><input type="range" id="playbackFrame" min="0" max="0" value="0" /></label>
+      <label class="slider-row"><span data-i18n="studio.playback.speed">速度</span><input type="range" id="playbackSpeed" min="10" max="200" value="100" /></label>
+      <button type="button" id="launchAnimEditsBtn" class="primary" disabled data-i18n="studio.playback.launchAnimEdits">确认动画并打开 AnimEdits</button>
+      <p id="animeditsStatus" class="info"></p>
+      <button type="button" id="exportNpzBtn" class="secondary" data-i18n="studio.playback.exportNpz">导出 NPZ</button>
+      <button type="button" id="exportFbxBtn" class="secondary" data-i18n="studio.playback.exportFbx">导出 FBX（自定义网格）</button>
+      </div>
+
+      <div id="studioOffsetSection" class="mka-step hidden">
+      <h2 data-i18n="studio.offset.title">自定义网格位置</h2>
+      <p id="offsetStatus" class="info" data-i18n="studio.offset.hint">拖动右侧蓝色网格 Gizmo 调整并排位置</p>
+      </div>
+    </section>
+    <section class="viewport-wrap">
+      <canvas id="viewport"></canvas>
+      <div class="viewport-hint" data-i18n="studio.viewport">左：NVIDIA SOMA 默认网格 · 右：meshpreps 自定义网格</div>
+    </section>
+  </main>
+  <script type="module" src="/app.js?v=animedits-3"></script>
+</body>
+</html>

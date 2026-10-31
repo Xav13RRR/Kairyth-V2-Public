@@ -1,0 +1,21 @@
+Kairyth V2 — Copyright 2026 Xav13RRR.
+
+The compatible main-program combination is offered under GNU GPL version 3;
+existing GPL or-later rights are preserved. Maintainer-original Kairyth and MKA
+predecessor contributions are additionally licensed under Apache-2.0.
+See LICENSE_SCOPE.md for the scope of those grants.
+
+Third-party material retains its copyrights, licenses and required notices.
+The application licenses do not grant rights to separately licensed models,
+weights, body-model data, skeletons, artwork, fonts or plug-ins.
+
+Included SOMA resources identified in docs/resource-license-evidence.json:
+Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES, Apache License 2.0.
+The core float32 joints array is derived from the pinned official joint values.
+
+Geist Sans: Copyright 2024 The Geist Project Authors. Original repository
+notices also identify Copyright 2023 Vercel Inc., in collaboration with
+basement.studio. Licensed under the SIL Open Font License 1.1; the original
+release notices are retained in motionbuilder_app/static/fonts/.
+
+See THIRD_PARTY_NOTICES.md for component sources and license texts.

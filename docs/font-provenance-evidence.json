@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-31",
+  "Geist": {
+    "restored": true,
+    "path": "motionbuilder_app/static/fonts/GeistSans-Variable.woff2",
+    "sha256": "46525b05bbf4527d263f8624ca7024c7d0dce3c64430267d30c31c6dd3821e4d",
+    "official_sha256_exact_match": true,
+    "official_release": {
+      "tag": "1.4.2",
+      "commit": "4d655731f83507f0258ce5541c297b6553d5d081",
+      "git_blob": "d1a0cbc66e39c773778eaa989ddad838b1b94901",
+      "original_path": "packages/next/dist/fonts/geist-sans/Geist-Variable.woff2",
+      "ofl_text_source_sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f",
+      "license_text_source_sha256": "930853ee1daa68554d9e35c8a9175affb74f699fad9a5da6ee5ebe76379d9137"
+    },
+    "version": "1.400",
+    "glyph_count": 825,
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100,
+        "default": 400,
+        "max": 900
+      }
+    ],
+    "license_text_notes": "Geist-LICENSE.txt is byte-identical to fixed official text. Geist-OFL.txt preserves complete official text with one terminal LF added.",
+    "original_font_bytes_unchanged": true
+  },
+  "Oswald": {
+    "restored": false,
+    "path": "motionbuilder_app/static/fonts/Oswald-Bold-Latin.woff2",
+    "sha256": "2e861666f1a995cc522cf4fc0f789bbf6b57f5939b8bbc93ac5a33195d9813c4",
+    "identity": {
+      "copyright": "Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)",
+      "version": "Version 4.103;gftools[0.9.33.dev8+g029e19f]",
+      "family": "Oswald",
+      "subfamily": "Bold",
+      "glyph_count": 241,
+      "license_name_id_13_present": false,
+      "license_name_id_14": "https://scripts.sil.org/OFL",
+      "official_cdn_byte_match": false
+    },
+    "official_family_ofl": "https://github.com/google/fonts/blob/b6f0fe1740573b70ee367fbaba04b7586be85af3/ofl/oswald/OFL.txt",
+    "official_source_commit_from_metadata": "89795261ac9eeb9aa8cd99f43982c4e4b0e53261",
+    "bounded_comparison": "Google CDN versions v49/v53/v56/v57 do not match the inspected SHA256. Against v57, 13/15 decoded SFNT tables match; head checksum and glyf overlap-flag representations differ. These comparisons identify the family/version, not an exact-file distribution grant.",
+    "decision": "Not included: exact-file source and license evidence are not established."
+  }
+}

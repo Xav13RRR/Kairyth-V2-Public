@@ -1,0 +1,2427 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-31",
+  "scope": "Exact source and resource identities, feature roles, applicable terms and distribution classifications.",
+  "policy": "File availability and hash identity do not grant usage or redistribution rights. Restricted body-model programs and resources are excluded unless an applicable distribution grant is established.",
+  "fixed_references": {
+    "kimodo_code": "e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954",
+    "kimodo_soma_rp_v1_1_model": "6c9233af1180b8151e3c4703477104af5dce9dd5",
+    "skintokens_model": "79736cad0fd84de384d5eede659b4ebd24effe33"
+  },
+  "resources": [
+    {
+      "id": "resource-001",
+      "path": "GVHMR/hmr4d/dataset/bedlam/resource/vname2lwh.pt",
+      "sha256": "7b81e1b70f79872a89fb5c3df2296f7d8d7f5f1baf1f03afdb2c2046323486d4",
+      "feature": "gvhmr",
+      "required": false,
+      "role": "Dataset-specific training/evaluation metadata",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-002",
+      "path": "GVHMR/hmr4d/dataset/rich/resource/cam2params.pt",
+      "sha256": "e260ae6f8f65e8e0a56af2a1130181ec663f3a382147984272111aec74f7c260",
+      "feature": "gvhmr",
+      "required": false,
+      "role": "Dataset-specific training/evaluation metadata",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-003",
+      "path": "GVHMR/hmr4d/network/hmr2/configs/smpl_mean_params.npz",
+      "sha256": "6fd6dd687800da946d0a0492383f973b92ec20f166a0b829775882868c35fcdd",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-004",
+      "path": "GVHMR/hmr4d/utils/body_model/coco_aug_dict.pth",
+      "sha256": "9d045cc3e507e1f7d91ef89904cdfa26e29cf18710f52f9fd305a88ae5d4e539",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-005",
+      "path": "GVHMR/hmr4d/utils/body_model/seg_part_info.npy",
+      "sha256": "a9a9272563da3d16811bc455fb618902d31f3adcf719da2e46197853045a2a10",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-006",
+      "path": "GVHMR/hmr4d/utils/body_model/smpl_3dpw14_J_regressor_sparse.pt",
+      "sha256": "f3f4cf476e206d36ac806beab9b728b886c10f1534a74318839391f76ad5ab0a",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-007",
+      "path": "GVHMR/hmr4d/utils/body_model/smpl_coco17_J_regressor.pt",
+      "sha256": "bacdaf756629493994cc869f4c27d179f5e4a5d06b8797ee3dcb94571522079f",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-008",
+      "path": "GVHMR/hmr4d/utils/body_model/smpl_neutral_J_regressor.pt",
+      "sha256": "70e3213bd30fe8d8ce37b54675282745e406f915a51511a003aeff99b6da04cf",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-009",
+      "path": "GVHMR/hmr4d/utils/body_model/smplx2smpl_sparse.pt",
+      "sha256": "0fc821a9e79ec3e76d6a9796b96d5bef8cd67055e18497bbe370d8aed9e07e06",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-010",
+      "path": "GVHMR/hmr4d/utils/body_model/smplx_verts437.pt",
+      "sha256": "ef0ea64c470a1fea80adb5e4b866c78a792a04f5f98744c9367b15e57bfb4a4d",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Body-model derived auxiliary / HMR2 inference parameters",
+      "rights_status": "restricted-or-derived-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-011",
+      "path": "GVHMR/third-party/DPVO/DBoW2/demo/images/image0.png",
+      "sha256": "d011af1db9c49c3477ca973bf193fa78b60df9bfd6fbebf8e3a7dd74a560a164",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-012",
+      "path": "GVHMR/third-party/DPVO/DBoW2/demo/images/image1.png",
+      "sha256": "db699573212dae6940ce27f6435336ea4b36305834e0d9fb242d719bcd404c12",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-013",
+      "path": "GVHMR/third-party/DPVO/DBoW2/demo/images/image2.png",
+      "sha256": "158fbfd6635848c786a8fe81e9cf04ca1b74e40c90bd1255ae72e29c85ecac03",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-014",
+      "path": "GVHMR/third-party/DPVO/DBoW2/demo/images/image3.png",
+      "sha256": "40af24367eefded0245a83abeb70a855efef63d5aa4a2a287ea0890ef102386c",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-015",
+      "path": "GVHMR/third-party/DPVO/DPRetrieval/pybind11/docs/pybind11-logo.png",
+      "sha256": "e3faf68e64e60f2f419a5935b0741f369958aab0bba2f67f825c257d54362ac9",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-016",
+      "path": "GVHMR/third-party/DPVO/DPRetrieval/pybind11/docs/pybind11_vs_boost_python1.png",
+      "sha256": "2845c0aa832cbb21ce38397fb850730610b786c988ea2ee8cb5db7130795f91a",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-017",
+      "path": "GVHMR/third-party/DPVO/DPRetrieval/pybind11/docs/pybind11_vs_boost_python1.svg",
+      "sha256": "6626140e94a719ceac53e6c7b58c5d9ea981ba677496cab05d1ce011ced81fc4",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-018",
+      "path": "GVHMR/third-party/DPVO/DPRetrieval/pybind11/docs/pybind11_vs_boost_python2.png",
+      "sha256": "724a5b94fe8b104996de044c7ea72a4c781e244a45976fc508162bf2e2b7b3f2",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-019",
+      "path": "GVHMR/third-party/DPVO/DPRetrieval/pybind11/docs/pybind11_vs_boost_python2.svg",
+      "sha256": "09461d2a469b3204979756e607bf709138b1c0fbddfaf87423562a3de195b89b",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-020",
+      "path": "GVHMR/third-party/DPVO/DPViewer/pybind11/docs/pybind11-logo.png",
+      "sha256": "e3faf68e64e60f2f419a5935b0741f369958aab0bba2f67f825c257d54362ac9",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-021",
+      "path": "GVHMR/third-party/DPVO/DPViewer/pybind11/docs/pybind11_vs_boost_python1.png",
+      "sha256": "2845c0aa832cbb21ce38397fb850730610b786c988ea2ee8cb5db7130795f91a",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-022",
+      "path": "GVHMR/third-party/DPVO/DPViewer/pybind11/docs/pybind11_vs_boost_python1.svg",
+      "sha256": "103daed215a55dcd7f96e4f5566131f5c823e1a9ebc9df83c97d09ff8cd9de37",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-023",
+      "path": "GVHMR/third-party/DPVO/DPViewer/pybind11/docs/pybind11_vs_boost_python2.png",
+      "sha256": "724a5b94fe8b104996de044c7ea72a4c781e244a45976fc508162bf2e2b7b3f2",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-024",
+      "path": "GVHMR/third-party/DPVO/DPViewer/pybind11/docs/pybind11_vs_boost_python2.svg",
+      "sha256": "246ebe37d637704005174d87fc28caad4e6eb2b136d860e04f4ed7fbe23f32d3",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-025",
+      "path": "GVHMR/third-party/DPVO/Pangolin/components/pango_opengl/src/fonts/AnonymousPro.ttf",
+      "sha256": "6a3502f45cd580a77e61ac5eec75a7ea699c27e295596806b514d3a04d89165b",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-026",
+      "path": "GVHMR/third-party/DPVO/Pangolin/components/pango_python/pybind11/docs/pybind11-logo.png",
+      "sha256": "e3faf68e64e60f2f419a5935b0741f369958aab0bba2f67f825c257d54362ac9",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-027",
+      "path": "GVHMR/third-party/DPVO/Pangolin/components/pango_python/pybind11/docs/pybind11_vs_boost_python1.png",
+      "sha256": "2845c0aa832cbb21ce38397fb850730610b786c988ea2ee8cb5db7130795f91a",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-028",
+      "path": "GVHMR/third-party/DPVO/Pangolin/components/pango_python/pybind11/docs/pybind11_vs_boost_python1.svg",
+      "sha256": "6626140e94a719ceac53e6c7b58c5d9ea981ba677496cab05d1ce011ced81fc4",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-029",
+      "path": "GVHMR/third-party/DPVO/Pangolin/components/pango_python/pybind11/docs/pybind11_vs_boost_python2.png",
+      "sha256": "724a5b94fe8b104996de044c7ea72a4c781e244a45976fc508162bf2e2b7b3f2",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-030",
+      "path": "GVHMR/third-party/DPVO/Pangolin/components/pango_python/pybind11/docs/pybind11_vs_boost_python2.svg",
+      "sha256": "09461d2a469b3204979756e607bf709138b1c0fbddfaf87423562a3de195b89b",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-031",
+      "path": "GVHMR/third-party/DPVO/Pangolin/scripts/vcpkg/scripts/tls12-download.exe",
+      "sha256": "275619941f778e33529fe7f879bd5bd960ac4b67d65f72ae8c95507902612d04",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-032",
+      "path": "GVHMR/third-party/DPVO/Pangolin/tools/VideoViewer/application-x-pango.svg",
+      "sha256": "69db317d6ed4a345868c138ca9f45d2de4399b4967aad9e53ea5f86cd5e232e1",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-033",
+      "path": "docs/images/kairyth-showcase.png",
+      "sha256": "30bdd2088387eb051fff10599f2f819a4e21265a8eb1c041ded7bc0d623f5e8a",
+      "feature": "support",
+      "required": false,
+      "role": "Maintainer-controlled UI/showcase image",
+      "rights_status": "project-artwork-distribution-permitted",
+      "publication": "user-authorized-first-party",
+      "source": null,
+      "acquisition": "Included project artwork; distribution scope is limited to this exact asset and does not grant rights to other artwork or trademarks.",
+      "license_evidence": {
+        "basis": "Project artwork; distribution scope limited to the exact named asset"
+      }
+    },
+    {
+      "id": "resource-034",
+      "path": "hybrik_runtime/src/HybrIK/assets/decompose.gif",
+      "sha256": "b0f113fc3b0eb39d26feb7a9473b47471aba6eabce5e7730aa29d77869c2266c",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-035",
+      "path": "hybrik_runtime/src/HybrIK/assets/hybrik.png",
+      "sha256": "5dd518dbcf05978d27e6222a92d4ed3c29dcad4b01007960dccd2722c6f188ab",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-036",
+      "path": "hybrik_runtime/src/HybrIK/assets/hybrik_dance1.gif",
+      "sha256": "ccdd5d644f89faf6cf7f6fb3859c03a53504e079d3ac27a27253690f77db1aba",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-037",
+      "path": "hybrik_runtime/src/HybrIK/assets/hybrik_dance2.gif",
+      "sha256": "67fb07bdd32035e5cb9e52651af4994b92ea2ccd5d3c2e95ec8842d83bf5e8f0",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-038",
+      "path": "hybrik_runtime/src/HybrIK/assets/hybrik_dance3.gif",
+      "sha256": "988c853df67352dd4eef4224ac91d31b7a3b7bac3bdffeb5f10a29f458424e4b",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-039",
+      "path": "hybrik_runtime/src/HybrIK/assets/hybrikx_basketball.gif",
+      "sha256": "f7ea5d87bae85b96193041ff50affa791ef041a4b95662b7dec13af229e9521b",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-040",
+      "path": "hybrik_runtime/src/HybrIK/assets/hybrikx_dance1.gif",
+      "sha256": "d654402acac47abdbe972eb8ebe49cbc8d2bc393b78ac8b775641e689d53349f",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-041",
+      "path": "hybrik_runtime/src/HybrIK/assets/ik.gif",
+      "sha256": "a6b6da8b49ae35c093ae268b2ce760fb254e93d5be811dece0299f19eb2785f7",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-042",
+      "path": "hybrik_runtime/src/HybrIK/assets/taiji.gif",
+      "sha256": "9c7fc458821cd0235858e008e7ccfe23c884ace8d297ec17d0a99b8324fc4315",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-043",
+      "path": "kimodo_runtime/src/kimodo/assets/demo/nvidia_logo.png",
+      "sha256": "36bdc5183fc818cdb24e6e7ccc32d6afd951eaf50e1d1c0347ea815b063c41d4",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-044",
+      "path": "kimodo_runtime/src/kimodo/assets/demo/nvidia_logo_dark.png",
+      "sha256": "416c7d72be2fa245deea1163d99d8791b12facb682d8f4fa15e5a108f4dd1109",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-045",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/joints.p",
+      "sha256": "16b6c234face0b93143a45db7677f02da4a62835300da5401b6acf89dc7d985e",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/joints.p",
+        "upstream_git_blob": "4d5853a6e1ac0e6f2f854cd1a8893293612fa3ac",
+        "local_git_blob": "4d5853a6e1ac0e6f2f854cd1a8893293612fa3ac",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-046",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/head_link.STL",
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/head_link.STL",
+        "upstream_git_blob": "2ee5fba15de3ccd4c31774bc7a66de7aeefab770",
+        "local_git_blob": "2ee5fba15de3ccd4c31774bc7a66de7aeefab770",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-047",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_ankle_pitch_link.STL",
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_ankle_pitch_link.STL",
+        "upstream_git_blob": "69de8490184afc698f633e34bb74e65351bd4689",
+        "local_git_blob": "69de8490184afc698f633e34bb74e65351bd4689",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-048",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_ankle_roll_link.STL",
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_ankle_roll_link.STL",
+        "upstream_git_blob": "8864e9f98103190883d1ba027aba5469925f2bca",
+        "local_git_blob": "8864e9f98103190883d1ba027aba5469925f2bca",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-049",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_elbow_link.STL",
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_elbow_link.STL",
+        "upstream_git_blob": "1a96d99ba469960173129084ab6dd3bf8a732a71",
+        "local_git_blob": "1a96d99ba469960173129084ab6dd3bf8a732a71",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-050",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_index_0_link.STL",
+      "sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_index_0_link.STL",
+        "upstream_git_blob": "8069369afd690192ef592cbe502082ebb889fd38",
+        "local_git_blob": "8069369afd690192ef592cbe502082ebb889fd38",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-051",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_index_1_link.STL",
+      "sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_index_1_link.STL",
+        "upstream_git_blob": "89d231d7e896a8ca5955a692980aa7d4a83d8905",
+        "local_git_blob": "89d231d7e896a8ca5955a692980aa7d4a83d8905",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-052",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_middle_0_link.STL",
+      "sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_middle_0_link.STL",
+        "upstream_git_blob": "8069369afd690192ef592cbe502082ebb889fd38",
+        "local_git_blob": "8069369afd690192ef592cbe502082ebb889fd38",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-053",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_middle_1_link.STL",
+      "sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_middle_1_link.STL",
+        "upstream_git_blob": "89d231d7e896a8ca5955a692980aa7d4a83d8905",
+        "local_git_blob": "89d231d7e896a8ca5955a692980aa7d4a83d8905",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-054",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_palm_link.STL",
+      "sha256": "23a486b75bd78a9bf03cec25d84d87f97f3dae038cf21a743b6d469b337e4004",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_palm_link.STL",
+        "upstream_git_blob": "7d595ed8fb2f20363c4b20eeb9e5b8f564c52191",
+        "local_git_blob": "7d595ed8fb2f20363c4b20eeb9e5b8f564c52191",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-055",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_thumb_0_link.STL",
+      "sha256": "a90c721661c0622685488a3c74d1e122c7da89242d3a1daef75edb83422d05e0",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_thumb_0_link.STL",
+        "upstream_git_blob": "3028bb4d6e1ae3d30d2504259c08e4106bbacf63",
+        "local_git_blob": "3028bb4d6e1ae3d30d2504259c08e4106bbacf63",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-056",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_thumb_1_link.STL",
+      "sha256": "445c54a45bc13ce36001556f66bc0f49c83cb40321205ae4d676bb2874325684",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_thumb_1_link.STL",
+        "upstream_git_blob": "d1c080c86e1d11fb0c8e7e58afc57863acc78280",
+        "local_git_blob": "d1c080c86e1d11fb0c8e7e58afc57863acc78280",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-057",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_thumb_2_link.STL",
+      "sha256": "3d8dbe5085acfc213d21aa8b0782e89cd79084e9678f3a85fc7b04a86b029db5",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hand_thumb_2_link.STL",
+        "upstream_git_blob": "8b32e966348f646fe4e39fe929a10c6d2c766579",
+        "local_git_blob": "8b32e966348f646fe4e39fe929a10c6d2c766579",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-058",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hip_pitch_link.STL",
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hip_pitch_link.STL",
+        "upstream_git_blob": "5b751c767ecf03b29c707b19f1faf5367e8d33d2",
+        "local_git_blob": "5b751c767ecf03b29c707b19f1faf5367e8d33d2",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-059",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hip_roll_link.STL",
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hip_roll_link.STL",
+        "upstream_git_blob": "778437ffe61731915fa4cb7cf2390e9cbe738c43",
+        "local_git_blob": "778437ffe61731915fa4cb7cf2390e9cbe738c43",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-060",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hip_yaw_link.STL",
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_hip_yaw_link.STL",
+        "upstream_git_blob": "383093ab96ed3a099ab79f5d6ed144fc0b7067a9",
+        "local_git_blob": "383093ab96ed3a099ab79f5d6ed144fc0b7067a9",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-061",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_knee_link.STL",
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_knee_link.STL",
+        "upstream_git_blob": "f2e98e54e8f1980eb62ad25c7a838044c23bbadf",
+        "local_git_blob": "f2e98e54e8f1980eb62ad25c7a838044c23bbadf",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-062",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_rubber_hand.STL",
+      "sha256": "cff2221a690fa69303f61fce68f2d155c1517b52efb6ca9262dd56e0bc6e70fe",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_rubber_hand.STL",
+        "upstream_git_blob": "c44830f1fd519ee28750cad04d7d0adb209c265f",
+        "local_git_blob": "c44830f1fd519ee28750cad04d7d0adb209c265f",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-063",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_shoulder_pitch_link.STL",
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_shoulder_pitch_link.STL",
+        "upstream_git_blob": "e698311fb12d3f22f018b668c40dab667c39b8d3",
+        "local_git_blob": "e698311fb12d3f22f018b668c40dab667c39b8d3",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-064",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_shoulder_roll_link.STL",
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_shoulder_roll_link.STL",
+        "upstream_git_blob": "80bca84aca41137f8270fb35e263dcc5d9658e43",
+        "local_git_blob": "80bca84aca41137f8270fb35e263dcc5d9658e43",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-065",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_shoulder_yaw_link.STL",
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_shoulder_yaw_link.STL",
+        "upstream_git_blob": "281e699055ffafe094f52a440547eb4b64f83bfa",
+        "local_git_blob": "281e699055ffafe094f52a440547eb4b64f83bfa",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-066",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_pitch_link.STL",
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_pitch_link.STL",
+        "upstream_git_blob": "82cc224a8e41251d879502f9809e31d0988ec7f9",
+        "local_git_blob": "82cc224a8e41251d879502f9809e31d0988ec7f9",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-067",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_roll_link.STL",
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_roll_link.STL",
+        "upstream_git_blob": "f3c263a7ab3fc1e902bf2513064d4bc666c6b59f",
+        "local_git_blob": "f3c263a7ab3fc1e902bf2513064d4bc666c6b59f",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-068",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_roll_rubber_hand.STL",
+      "sha256": "e81030abd023bd9e4a308ef376d814a2c12d684d8a7670c335bbd5cd7809c909",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_roll_rubber_hand.STL",
+        "upstream_git_blob": "8fa435b66cf9d81df34423c752452ea2c7d90479",
+        "local_git_blob": "8fa435b66cf9d81df34423c752452ea2c7d90479",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-069",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_yaw_link.STL",
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/left_wrist_yaw_link.STL",
+        "upstream_git_blob": "31be4fd45fa18987b35b3386fdce2ce98c798774",
+        "local_git_blob": "31be4fd45fa18987b35b3386fdce2ce98c798774",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-070",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/logo_link.STL",
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/logo_link.STL",
+        "upstream_git_blob": "e9792098504b64b359fbffa983373e5e6fa1b50a",
+        "local_git_blob": "e9792098504b64b359fbffa983373e5e6fa1b50a",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-071",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/pelvis.STL",
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/pelvis.STL",
+        "upstream_git_blob": "691a779b9c9f4c97f48eaa9edf9eb336ca3b4411",
+        "local_git_blob": "691a779b9c9f4c97f48eaa9edf9eb336ca3b4411",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-072",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/pelvis_contour_link.STL",
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/pelvis_contour_link.STL",
+        "upstream_git_blob": "42434339abf5a0a3816f890389e3e61af3b1e03c",
+        "local_git_blob": "42434339abf5a0a3816f890389e3e61af3b1e03c",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-073",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_ankle_pitch_link.STL",
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_ankle_pitch_link.STL",
+        "upstream_git_blob": "e77d8a2fe1e5d56fac049833d254d6ffa4f6b350",
+        "local_git_blob": "e77d8a2fe1e5d56fac049833d254d6ffa4f6b350",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-074",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_ankle_roll_link.STL",
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_ankle_roll_link.STL",
+        "upstream_git_blob": "d4261dd7ccf39dd9c54cad37c1982f1d50e6fccc",
+        "local_git_blob": "d4261dd7ccf39dd9c54cad37c1982f1d50e6fccc",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-075",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_elbow_link.STL",
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_elbow_link.STL",
+        "upstream_git_blob": "f259e3812efb9985d6463c04d3e8a4b53793a699",
+        "local_git_blob": "f259e3812efb9985d6463c04d3e8a4b53793a699",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-076",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_index_0_link.STL",
+      "sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_index_0_link.STL",
+        "upstream_git_blob": "f87ad3212b5d52b40d8017e5cf7fc3caf78e51e4",
+        "local_git_blob": "f87ad3212b5d52b40d8017e5cf7fc3caf78e51e4",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-077",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_index_1_link.STL",
+      "sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_index_1_link.STL",
+        "upstream_git_blob": "6dea51ad93c8a64ec9951f4914fa16f749ea176c",
+        "local_git_blob": "6dea51ad93c8a64ec9951f4914fa16f749ea176c",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-078",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_middle_0_link.STL",
+      "sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_middle_0_link.STL",
+        "upstream_git_blob": "f87ad3212b5d52b40d8017e5cf7fc3caf78e51e4",
+        "local_git_blob": "f87ad3212b5d52b40d8017e5cf7fc3caf78e51e4",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-079",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_middle_1_link.STL",
+      "sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_middle_1_link.STL",
+        "upstream_git_blob": "6dea51ad93c8a64ec9951f4914fa16f749ea176c",
+        "local_git_blob": "6dea51ad93c8a64ec9951f4914fa16f749ea176c",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-080",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_palm_link.STL",
+      "sha256": "86c0b231cc44477d64a6493e5a427ba16617a00738112dd187c652675b086fb9",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_palm_link.STL",
+        "upstream_git_blob": "5ae00a783df3e5744ebce98ab13f9f3591848e7a",
+        "local_git_blob": "5ae00a783df3e5744ebce98ab13f9f3591848e7a",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-081",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_thumb_0_link.STL",
+      "sha256": "544298d0ea1088f5b276a10cc6a6a9e533efdd91594955fdc956c46211d07f83",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_thumb_0_link.STL",
+        "upstream_git_blob": "1cae7f18e16605cb9d6b1d1a0cf6e5c5c360a344",
+        "local_git_blob": "1cae7f18e16605cb9d6b1d1a0cf6e5c5c360a344",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-082",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_thumb_1_link.STL",
+      "sha256": "0a9a820da8dd10f298778b714f1364216e8a5976f4fd3a05689ea26327d44bf6",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_thumb_1_link.STL",
+        "upstream_git_blob": "c141fbf5a61744444b4a6b70d5b8fe947ff167ae",
+        "local_git_blob": "c141fbf5a61744444b4a6b70d5b8fe947ff167ae",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-083",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_thumb_2_link.STL",
+      "sha256": "3f1bfb37668e8f61801c8d25f171fa1949e08666be86c67acad7e0079937cc45",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hand_thumb_2_link.STL",
+        "upstream_git_blob": "e942923c50993a56cfeb29040066b1da1f9d5770",
+        "local_git_blob": "e942923c50993a56cfeb29040066b1da1f9d5770",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-084",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hip_pitch_link.STL",
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hip_pitch_link.STL",
+        "upstream_git_blob": "998a0a0f5c248b217cf82c5088d6d365d9654ecd",
+        "local_git_blob": "998a0a0f5c248b217cf82c5088d6d365d9654ecd",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-085",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hip_roll_link.STL",
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hip_roll_link.STL",
+        "upstream_git_blob": "47b2eebdd36c7289679eebb9583c65a15514e194",
+        "local_git_blob": "47b2eebdd36c7289679eebb9583c65a15514e194",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-086",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hip_yaw_link.STL",
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_hip_yaw_link.STL",
+        "upstream_git_blob": "371856427c7cc31ae7463c83f00ef6652c72d672",
+        "local_git_blob": "371856427c7cc31ae7463c83f00ef6652c72d672",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-087",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_knee_link.STL",
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_knee_link.STL",
+        "upstream_git_blob": "76d21a3d81e4e34520c5d6b3f28d7e43c1874364",
+        "local_git_blob": "76d21a3d81e4e34520c5d6b3f28d7e43c1874364",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-088",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_rubber_hand.STL",
+      "sha256": "99533b778bca6246144fa511bb9d4e555e075c641f2a0251e04372869cd99d67",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_rubber_hand.STL",
+        "upstream_git_blob": "0aacffbb8168f0bb588f8cba3f37f9e2c6e0421a",
+        "local_git_blob": "0aacffbb8168f0bb588f8cba3f37f9e2c6e0421a",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-089",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_shoulder_pitch_link.STL",
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_shoulder_pitch_link.STL",
+        "upstream_git_blob": "3f5b4ed47ade68e83f617ef3fd65cb810e9b0e07",
+        "local_git_blob": "3f5b4ed47ade68e83f617ef3fd65cb810e9b0e07",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-090",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_shoulder_roll_link.STL",
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_shoulder_roll_link.STL",
+        "upstream_git_blob": "179d61753d48b3a55165b81ded2c14e84deb81c2",
+        "local_git_blob": "179d61753d48b3a55165b81ded2c14e84deb81c2",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-091",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_shoulder_yaw_link.STL",
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_shoulder_yaw_link.STL",
+        "upstream_git_blob": "2ba6076a8853edac5e3e17cffd2c256318e88d92",
+        "local_git_blob": "2ba6076a8853edac5e3e17cffd2c256318e88d92",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-092",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_pitch_link.STL",
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_pitch_link.STL",
+        "upstream_git_blob": "da194543c40df9d492abb0553c06cc614a78caae",
+        "local_git_blob": "da194543c40df9d492abb0553c06cc614a78caae",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-093",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_roll_link.STL",
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_roll_link.STL",
+        "upstream_git_blob": "26868d2282b7e38c2ba40e00968d2c92c421fbd2",
+        "local_git_blob": "26868d2282b7e38c2ba40e00968d2c92c421fbd2",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-094",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_roll_rubber_hand.STL",
+      "sha256": "0729aff1ac4356f9314de13a46906267642e58bc47f0d8a7f17f6590a6242ccf",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_roll_rubber_hand.STL",
+        "upstream_git_blob": "c365aa9d8cafb8a96d2f58fe53a83727bb7427c8",
+        "local_git_blob": "c365aa9d8cafb8a96d2f58fe53a83727bb7427c8",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-095",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_yaw_link.STL",
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/right_wrist_yaw_link.STL",
+        "upstream_git_blob": "d788902867014c5984e6029fce822508579f73dc",
+        "local_git_blob": "d788902867014c5984e6029fce822508579f73dc",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-096",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_L_link.STL",
+      "sha256": "82be7f93e85b3d303a1d1e1847e2c916939bd61c424ed1ebd28691ec33909dd1",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_L_link.STL",
+        "upstream_git_blob": "75d82f57840ef997dece6477b33305bc3db5a1e2",
+        "local_git_blob": "75d82f57840ef997dece6477b33305bc3db5a1e2",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-097",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_L_rod_link.STL",
+      "sha256": "c10de1effa7ea797ac268006aa2a739036c7e1f326b2012d711ee2c20c5a6e96",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_L_rod_link.STL",
+        "upstream_git_blob": "6747f3f9341bd72b3803385c135c3ce750322e9d",
+        "local_git_blob": "6747f3f9341bd72b3803385c135c3ce750322e9d",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-098",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_R_link.STL",
+      "sha256": "54ded433a3a0c76027365856fdbd55215643de88846f7d436598a4071e682725",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_R_link.STL",
+        "upstream_git_blob": "5cb5958babb73993ec991f60b7f4c2d1ad9c6ac5",
+        "local_git_blob": "5cb5958babb73993ec991f60b7f4c2d1ad9c6ac5",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-099",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_R_rod_link.STL",
+      "sha256": "cb83fd38a9f06c99e3f301c70f12d94ae770a8f0cf9501f83580a27f908990b4",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_constraint_R_rod_link.STL",
+        "upstream_git_blob": "95cf415f72f1679a5867ca21a4af774f0b217cad",
+        "local_git_blob": "95cf415f72f1679a5867ca21a4af774f0b217cad",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-100",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_link.STL",
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_link.STL",
+        "upstream_git_blob": "17745af9ce8f5c09756821330a150466680d87b7",
+        "local_git_blob": "17745af9ce8f5c09756821330a150466680d87b7",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-101",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_link_23dof_rev_1_0.STL",
+      "sha256": "3cd0d56fde14b73c1623304684805029971c4f84b596f9914e823ca70a107fd2",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_link_23dof_rev_1_0.STL",
+        "upstream_git_blob": "079aa8124f279cd40a50d23c2f061dd82ccc16c6",
+        "local_git_blob": "079aa8124f279cd40a50d23c2f061dd82ccc16c6",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-102",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_link_rev_1_0.STL",
+      "sha256": "11ddb46f2098efbbd8816b1d65893632d8e78be936376c7cdcd6771899ccc723",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/torso_link_rev_1_0.STL",
+        "upstream_git_blob": "8a759a709750ad97e1f372db0ebbff246daedcc1",
+        "local_git_blob": "8a759a709750ad97e1f372db0ebbff246daedcc1",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-103",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_constraint_L.STL",
+      "sha256": "8ebafdcb4de6871113f0ca2c356618d6e46b1d50f6c0bf9e37f47b9d8e100d99",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_constraint_L.STL",
+        "upstream_git_blob": "911410fa56c33143e3360fca25e2ff7c33221de1",
+        "local_git_blob": "911410fa56c33143e3360fca25e2ff7c33221de1",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-104",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_constraint_R.STL",
+      "sha256": "791902a291ffbd35ab97383b7b44ea5d975de7c80eef838797c970790b382ca9",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_constraint_R.STL",
+        "upstream_git_blob": "babe79492543c462984431bd40d18ec2a0c9a9a2",
+        "local_git_blob": "babe79492543c462984431bd40d18ec2a0c9a9a2",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-105",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_roll_link.STL",
+      "sha256": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_roll_link.STL",
+        "upstream_git_blob": "65831abd2a64bc8c36e31016964413a3d2116725",
+        "local_git_blob": "65831abd2a64bc8c36e31016964413a3d2116725",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-106",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_roll_link_rev_1_0.STL",
+      "sha256": "b67c347a05abc3e8ddae600d98a082bee273bb39f8e651647708b0a7140a8a97",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_roll_link_rev_1_0.STL",
+        "upstream_git_blob": "a64f330c592582dc31cdf38f4d08cfff06681c5f",
+        "local_git_blob": "a64f330c592582dc31cdf38f4d08cfff06681c5f",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-107",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_support_link.STL",
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_support_link.STL",
+        "upstream_git_blob": "63660fb6ee93998036f6972527b4aab4f7933da0",
+        "local_git_blob": "63660fb6ee93998036f6972527b4aab4f7933da0",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-108",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_yaw_link.STL",
+      "sha256": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_yaw_link.STL",
+        "upstream_git_blob": "7d36b02cce7cf5bb554b928fb4790afeb8a40892",
+        "local_git_blob": "7d36b02cce7cf5bb554b928fb4790afeb8a40892",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-109",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_yaw_link_rev_1_0.STL",
+      "sha256": "ec6db442b11f25eed898b5add07940c85d804f300de24dcbd264ccd8be7d554c",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/meshes/g1/waist_yaw_link_rev_1_0.STL",
+        "upstream_git_blob": "0fabb63d37627cb77f64c5d2a46cf25d4acc66fc",
+        "local_git_blob": "0fabb63d37627cb77f64c5d2a46cf25d4acc66fc",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-110",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/rest_pose_local_rot.p",
+      "sha256": "23b364230e55d67bd6400a4618a2e22c4b99924f1f86fccb19b725766990fa41",
+      "feature": "kimodo-g1",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/g1skel34/rest_pose_local_rot.p",
+        "upstream_git_blob": "d441fc0a0b15a434c8455e4ead8cd37753742546",
+        "local_git_blob": "d441fc0a0b15a434c8455e4ead8cd37753742546",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-111",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/smplx22/beta.npy",
+      "sha256": "abfc1cc9e819d017580739e4a65b39458ae840808f01819ad54260283575fa11",
+      "feature": "kimodo-smplx",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "restricted-body-model-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/smplx22/beta.npy",
+        "upstream_git_blob": "4589d2fd49bd86c93c9c0b972afa160e73f9777e",
+        "local_git_blob": "4589d2fd49bd86c93c9c0b972afa160e73f9777e",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-112",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/smplx22/joints.p",
+      "sha256": "cb4a2fdb4f1a5b49314b3e13eb33bf35700f4a2aef09c7a1976123f9154976e9",
+      "feature": "kimodo-smplx",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "restricted-body-model-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/smplx22/joints.p",
+        "upstream_git_blob": "fbba652bf10ab0df1dc858fbf7ada72787a56810",
+        "local_git_blob": "fbba652bf10ab0df1dc858fbf7ada72787a56810",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-113",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/smplx22/mean_hands.npy",
+      "sha256": "eff97ce9d98bfb1495501d8f00a883c08bfdfc05079037e9832f5d64b58d0e39",
+      "feature": "kimodo-smplx",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "restricted-body-model-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/smplx22/mean_hands.npy",
+        "upstream_git_blob": "ace3646e73d0d5f3ed1a679c557d81f5c67f06e6",
+        "local_git_blob": "ace3646e73d0d5f3ed1a679c557d81f5c67f06e6",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-114",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel30/joints.p",
+      "sha256": "f8582822d4f7cdd7c9cbb5ee8003f07d3116155fc49be11ed125d373d13e4e8a",
+      "feature": "kimodo",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "upstream-apache-evidence-reviewed",
+      "publication": "redistributable-under-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Included under the pinned official Apache-2.0 source evidence; retain NVIDIA copyright and license notices.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel30/joints.p",
+        "upstream_git_blob": "9e319f6fa3cb4959ed3221040b0ae945ec9646c7",
+        "local_git_blob": "9e319f6fa3cb4959ed3221040b0ae945ec9646c7",
+        "exact_match": true
+      },
+      "license_evidence": {
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/nv-tlabs/kimodo/blob/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/LICENSE"
+      }
+    },
+    {
+      "id": "resource-115",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel30/soma_base_fit_mhr_params.npz",
+      "sha256": "61f0b96c8386a19d44823faf4399816642b7e20691ed5b398c7402921090096e",
+      "feature": "kimodo-soma-layer",
+      "required": true,
+      "role": "Optional SOMA-layer body-identity visualization, not the default fixed-skin generation path",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel30/soma_base_fit_mhr_params.npz",
+        "upstream_git_blob": "4dd446f1d55308e80a34b1a898db5bcfc18875d8",
+        "local_git_blob": "4dd446f1d55308e80a34b1a898db5bcfc18875d8",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "resource-116",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/bvh_joints.p",
+      "sha256": "acea0ea0902e5a0215f0e2bc6ba75d05f2e73a62dc820017d233dce2202ed109",
+      "feature": "kimodo",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "upstream-apache-evidence-reviewed",
+      "publication": "redistributable-under-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Included under the pinned official Apache-2.0 source evidence; retain NVIDIA copyright and license notices.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/bvh_joints.p",
+        "upstream_git_blob": "3e3f2195fe6e094af5943cd98007344defa0c426",
+        "local_git_blob": "3e3f2195fe6e094af5943cd98007344defa0c426",
+        "exact_match": true
+      },
+      "license_evidence": {
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/nv-tlabs/kimodo/blob/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/LICENSE"
+      }
+    },
+    {
+      "id": "resource-117",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/joints.p",
+      "sha256": "dc5fd8e39e0ff312f5d0f536a87ac22ac58445e13443fcb8ab54e6817cb97ce7",
+      "feature": "kimodo",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "upstream-apache-evidence-reviewed",
+      "publication": "redistributable-under-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Included under the pinned official Apache-2.0 source evidence; retain NVIDIA copyright and license notices.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/joints.p",
+        "upstream_git_blob": "8c5eb2e67e1314d8765c821ae8dd4e0ff1351a3b",
+        "local_git_blob": "8c5eb2e67e1314d8765c821ae8dd4e0ff1351a3b",
+        "exact_match": true
+      },
+      "license_evidence": {
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/nv-tlabs/kimodo/blob/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/LICENSE"
+      }
+    },
+    {
+      "id": "resource-118",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/relaxed_hands_rest_pose.npy",
+      "sha256": "64a3828e0d1ef1f1de8228c74eba8040c0810d898169f1892d8997a213b2b64c",
+      "feature": "kimodo",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "upstream-apache-evidence-reviewed",
+      "publication": "redistributable-under-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Included under the pinned official Apache-2.0 source evidence; retain NVIDIA copyright and license notices.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/relaxed_hands_rest_pose.npy",
+        "upstream_git_blob": "9028f393d8728301d9e58652a7cf00e0d951d20e",
+        "local_git_blob": "9028f393d8728301d9e58652a7cf00e0d951d20e",
+        "exact_match": true
+      },
+      "license_evidence": {
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/nv-tlabs/kimodo/blob/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/LICENSE"
+      }
+    },
+    {
+      "id": "resource-119",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/skin_standard.npz",
+      "sha256": "90ee2cdf50f168382a7dd7e9c88b118298aba0aca4b72022080c89c4bab0ceb2",
+      "feature": "kimodo",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "upstream-apache-evidence-reviewed",
+      "publication": "redistributable-under-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Included under the pinned official Apache-2.0 source evidence; retain NVIDIA copyright and license notices.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/skin_standard.npz",
+        "upstream_git_blob": "d21389edff66cbd18356e6463eb41b223690e20f",
+        "local_git_blob": "d21389edff66cbd18356e6463eb41b223690e20f",
+        "exact_match": true
+      },
+      "license_evidence": {
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/nv-tlabs/kimodo/blob/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/LICENSE"
+      }
+    },
+    {
+      "id": "resource-120",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/somaskel77_standard_tpose.bvh",
+      "sha256": "d6e0ce8e9e1f0892ea6965dd78d8b7739742602ad5ebf86a2b9038f1c038ff51",
+      "feature": "kimodo-bvh-reference",
+      "required": false,
+      "role": "Reference T-pose BVH; not required for ordinary core editing or default generation",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Official pinned Kimodo path is provenance evidence, not standalone clearance for body-derived or Unitree assets. Review all applicable terms before obtaining/importing; no automatic download.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/somaskel77_standard_tpose.bvh",
+        "upstream_git_blob": "2998cb69ade063fc38d329288de7a14255e46b65",
+        "local_git_blob": "0bcc7813867f6fd4e038f7a12bb701b39ad68d50",
+        "exact_match": false
+      }
+    },
+    {
+      "id": "resource-121",
+      "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/standard_t_pose_global_offsets_rots.p",
+      "sha256": "464a8a95159d5e26ad24a702107aec86698935deeb034e02c9fe51e55472d75b",
+      "feature": "kimodo",
+      "required": true,
+      "role": "Exact skeleton/rest-pose/skin/export asset; do not replace topology, units or body identity",
+      "rights_status": "upstream-apache-evidence-reviewed",
+      "publication": "redistributable-under-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons",
+      "acquisition": "Included under the pinned official Apache-2.0 source evidence; retain NVIDIA copyright and license notices.",
+      "upstream_comparison": {
+        "path": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel77/standard_t_pose_global_offsets_rots.p",
+        "upstream_git_blob": "b6d68af1e73df0fc69c2cd9a59f2f6ed6aebb425",
+        "local_git_blob": "b6d68af1e73df0fc69c2cd9a59f2f6ed6aebb425",
+        "exact_match": true
+      },
+      "license_evidence": {
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/nv-tlabs/kimodo/blob/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/LICENSE"
+      }
+    },
+    {
+      "id": "resource-122",
+      "path": "motionbuilder_app/assets/skeletons/somaskel30/joints.npy",
+      "sha256": "f7ae3113785152a44b908ba28f3a3f2db22f889188c5efd819ee6617516a622f",
+      "feature": "core",
+      "required": true,
+      "role": "Required exact existing float32 SOMA30 neutral joints for local binding, editing and previews",
+      "rights_status": "upstream-apache-conversion-evidence-reviewed",
+      "publication": "redistributable-under-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons/somaskel30",
+      "acquisition": "Included array equals the float32 conversion of pinned official SOMA30 joint values; retain NVIDIA Apache-2.0 attribution.",
+      "conversion_verification": {
+        "source": "kimodo_runtime/src/kimodo/assets/skeletons/somaskel30/joints.p",
+        "source_sha256": "f8582822d4f7cdd7c9cbb5ee8003f07d3116155fc49be11ed125d373d13e4e8a",
+        "source_git_blob": "9e319f6fa3cb4959ed3221040b0ae945ec9646c7",
+        "shape": [
+          30,
+          3
+        ],
+        "source_dtype": "float64",
+        "existing_npy_dtype": "float32",
+        "strict_equality_after_float32_conversion": true,
+        "strict_equality_before_conversion": false,
+        "max_float64_to_existing_difference": 2.9135885926123706e-08,
+        "method": "Inspect ZIP/pickle opcodes without execution; read little-endian float64 storage; compare values with numpy array_equal after float32 conversion."
+      },
+      "license_evidence": {
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/nv-tlabs/kimodo/blob/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/LICENSE"
+      }
+    },
+    {
+      "id": "resource-123",
+      "path": "motionbuilder_app/assets/skeletons/somaskel30/joints.p",
+      "sha256": "f8582822d4f7cdd7c9cbb5ee8003f07d3116155fc49be11ed125d373d13e4e8a",
+      "feature": "core",
+      "required": false,
+      "role": "Duplicate SOMA30 torch-serialized joints; retained in old installation",
+      "rights_status": "asset-specific-rights-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954/kimodo/assets/skeletons/somaskel30",
+      "acquisition": "Excluded array: an independent distribution grant is not established. Separately licensed skeleton resources can be supplied through KAIRYTH_SKELETONS_ROOT."
+    },
+    {
+      "id": "resource-124",
+      "path": "motionbuilder_app/static/ICON.png",
+      "sha256": "4e22a49cdd5d9cf7500de15b3882e100933ce67bebad957b1b97faa96f5bbb2d",
+      "feature": "support",
+      "required": false,
+      "role": "Maintainer-controlled UI/showcase image",
+      "rights_status": "project-artwork-distribution-permitted",
+      "publication": "user-authorized-first-party",
+      "source": null,
+      "acquisition": "Included project artwork; distribution scope is limited to this exact asset and does not grant rights to other artwork or trademarks.",
+      "license_evidence": {
+        "basis": "Project artwork; distribution scope limited to the exact named asset"
+      }
+    },
+    {
+      "id": "resource-125",
+      "path": "motionbuilder_app/static/ICON2.png",
+      "sha256": "7903925b4acec203d65bb651347e576d6685cf5faa688bce277864246aa35bba",
+      "feature": "support",
+      "required": false,
+      "role": "Maintainer-controlled UI/showcase image",
+      "rights_status": "project-artwork-distribution-permitted",
+      "publication": "user-authorized-first-party",
+      "source": null,
+      "acquisition": "Included project artwork; distribution scope is limited to this exact asset and does not grant rights to other artwork or trademarks.",
+      "license_evidence": {
+        "basis": "Project artwork; distribution scope limited to the exact named asset"
+      }
+    },
+    {
+      "id": "resource-126",
+      "path": "motionbuilder_app/static/KMD_ICON.png",
+      "sha256": "ffd902283e97dbacd994e353418f0d340b2cc43d183a3713b6946712753377b9",
+      "feature": "support",
+      "required": false,
+      "role": "Maintainer-controlled UI/showcase image",
+      "rights_status": "project-artwork-distribution-permitted",
+      "publication": "user-authorized-first-party",
+      "source": null,
+      "acquisition": "Included project artwork; distribution scope is limited to this exact asset and does not grant rights to other artwork or trademarks.",
+      "license_evidence": {
+        "basis": "Project artwork; distribution scope limited to the exact named asset"
+      }
+    },
+    {
+      "id": "resource-127",
+      "path": "motionbuilder_app/static/fonts/GeistSans-Variable.woff2",
+      "sha256": "46525b05bbf4527d263f8624ca7024c7d0dce3c64430267d30c31c6dd3821e4d",
+      "feature": "ui",
+      "required": false,
+      "role": "Unmodified Geist variable webfont, embedded version 1.400; exact official tag 1.4.2 bytes",
+      "rights_status": "official-font-ofl-1.1-exact-match-reviewed",
+      "publication": "redistributable-under-ofl-1.1",
+      "source": "https://github.com/vercel/geist-font/blob/4d655731f83507f0258ce5541c297b6553d5d081/packages/next/dist/fonts/geist-sans/Geist-Variable.woff2",
+      "acquisition": "Exact official font bytes with both fixed-release OFL notices. Font terms remain OFL-1.1, separate from application code licenses.",
+      "license_evidence": {
+        "tag": "1.4.2",
+        "commit": "4d655731f83507f0258ce5541c297b6553d5d081",
+        "git_blob": "d1a0cbc66e39c773778eaa989ddad838b1b94901",
+        "size": 58512,
+        "ofl": "motionbuilder_app/static/fonts/Geist-OFL.txt",
+        "license": "motionbuilder_app/static/fonts/Geist-LICENSE.txt",
+        "copyright": [
+          "Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git)",
+          "Copyright (c) 2023 Vercel, in collaboration with basement.studio"
+        ]
+      }
+    },
+    {
+      "id": "resource-128",
+      "path": "motionbuilder_app/static/fonts/Oswald-Bold-Latin.woff2",
+      "sha256": "2e861666f1a995cc522cf4fc0f789bbf6b57f5939b8bbc93ac5a33195d9813c4",
+      "feature": "ui",
+      "required": false,
+      "role": "Oswald Bold Latin webfont version 4.103; embedded author/copyright and OFL URL, but no nameID13 license grant statement",
+      "rights_status": "font-family-ofl-known-local-grant-unconfirmed",
+      "publication": "held-notpublish",
+      "source": "https://github.com/google/fonts/blob/5fa1b4a6c5feaaab0c0e09a568f3d332bcab355b/ofl/oswald/METADATA.pb",
+      "acquisition": "Not included: the Oswald family OFL reference and version are known, but exact-file source/license evidence is not established. The interface uses configured fallback fonts.",
+      "identity_evidence": {
+        "copyright": "Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)",
+        "version": "Version 4.103;gftools[0.9.33.dev8+g029e19f]",
+        "family": "Oswald",
+        "subfamily": "Bold",
+        "glyph_count": 241,
+        "license_name_id_13_present": false,
+        "license_name_id_14": "https://scripts.sil.org/OFL",
+        "official_cdn_byte_match": false
+      }
+    },
+    {
+      "id": "resource-129",
+      "path": "motionbuilder_app/static/grs_cube_vectorized_white.svg",
+      "sha256": "0620e7583272f16b85565ad5da59a60706b08fcdc06d183af860a17c3032cb1d",
+      "feature": "support",
+      "required": false,
+      "role": "Actual application favicon referenced by index.html",
+      "rights_status": "project-artwork-distribution-permitted",
+      "publication": "user-authorized-first-party",
+      "source": "Kairyth project artwork",
+      "acquisition": "Included project artwork; distribution scope is limited to this exact asset and does not grant rights to other artwork or trademarks."
+    },
+    {
+      "id": "resource-130",
+      "path": "motionbuilder_app/static/kairyth.png",
+      "sha256": "f8ef93fc9d01eec2126fd91958a7d4057f17c0531baf50552d3a0ad1400c5588",
+      "feature": "support",
+      "required": false,
+      "role": "Maintainer-controlled UI/showcase image",
+      "rights_status": "project-artwork-distribution-permitted",
+      "publication": "user-authorized-first-party",
+      "source": null,
+      "acquisition": "Included project artwork; distribution scope is limited to this exact asset and does not grant rights to other artwork or trademarks.",
+      "license_evidence": {
+        "basis": "Project artwork; distribution scope limited to the exact named asset"
+      }
+    },
+    {
+      "id": "resource-131",
+      "path": "motionbuilder_app/static/kairyth_wordmark_clean.svg",
+      "sha256": "49facebd9d2f6f941c4f1436dd579cfcd6e4149c45b75730faf62d8e870b3c8e",
+      "feature": "support",
+      "required": false,
+      "role": "Actual application entrance/topbar wordmark referenced by index.html",
+      "rights_status": "project-artwork-distribution-permitted",
+      "publication": "user-authorized-first-party",
+      "source": "Kairyth project artwork",
+      "acquisition": "Included project artwork; distribution scope is limited to this exact asset and does not grant rights to other artwork or trademarks."
+    },
+    {
+      "id": "resource-132",
+      "path": "third_party/SkinTokens/assets/compare-skin.jpg",
+      "sha256": "98b943a1a0f1ec18dbbca08baa163f4a2d5b6774fa786eb61f49eec0bf7de8f8",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-133",
+      "path": "third_party/SkinTokens/assets/skintokens-teaser.png",
+      "sha256": "b75bd2c2692cfea1908e18621f326f8292c2aadc0820696eccf702b6d6881aa5",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-134",
+      "path": "third_party/UniRig/assets/doc/ar_training.png",
+      "sha256": "225f866989cc96b2ba3d01f320a1cfcb7e6800f2415292387bca0cae74fe145c",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-135",
+      "path": "third_party/UniRig/assets/doc/devil.gif",
+      "sha256": "1a6d00b42bd25d6708df9ca5b69900865eb50cf2bfe3cc72d64d87873cd99749",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-136",
+      "path": "third_party/UniRig/assets/doc/dragon.gif",
+      "sha256": "1459fb925b79b710d9496be5105eed48539942a47763029ae0cc855684c9a0e9",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-137",
+      "path": "third_party/UniRig/assets/doc/rabbit.gif",
+      "sha256": "124cad359767a48a4f5cf84103c5400ceb2815728c7f4c7bab7d57d0944d93a3",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-138",
+      "path": "third_party/UniRig/assets/doc/unirig_teaser.png",
+      "sha256": "44b056c9355386b872de584b734c57c823c7e73be7d20257e01e15861204247f",
+      "feature": "support",
+      "required": false,
+      "role": "Optional upstream illustration/demo/build-support asset",
+      "rights_status": "unreviewed",
+      "publication": "held-notpublish",
+      "source": null,
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-139",
+      "path": "third_party/UniRig/blender/add-on-vrm-v2.20.77_modified.zip",
+      "sha256": "8fe1e8b7e31ec602d9b32db33c533b03d68df747837bfad3479e1057bc9937c5",
+      "feature": "unirig",
+      "required": true,
+      "role": "Modified VRM Blender addon archive used by UniRig export; archive contents and included notices not yet cleared",
+      "rights_status": "archive-contents-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/saturday06/VRM-Addon-for-Blender",
+      "acquisition": "Not bundled. Establish provenance and redistribution permission before restoring; no downloader is provided."
+    },
+    {
+      "id": "resource-140",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smpl/lbs.py",
+      "sha256": "7d01c0ffa555c7cb64324f0c6189bc568689b29b8e11e04ca2470c5c0221377b",
+      "feature": "hybrik",
+      "required": true,
+      "role": "MPG-restricted body-model program",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-141",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smpl/SMPL.py",
+      "sha256": "30c19784f87ff366ac973fba921c5b830429f9ba797fe0801da11cb4277690ed",
+      "feature": "hybrik",
+      "required": true,
+      "role": "SMPL wrapper with helper correspondence to MPG sources; no direct MPG header, publication held pending provenance scope review",
+      "rights_status": "derived-source-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-142",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/body_models.py",
+      "sha256": "bfe2f07a930510292de3e4a37f0ed8dbdb6a26d5c6447a3df39e086e0304055f",
+      "feature": "hybrik",
+      "required": false,
+      "role": "MPG-restricted body-model program",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-143",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/lbs.py",
+      "sha256": "295e1843baf073855c5665fb2611e5c0d84175a02a6084c0cdcbbdfd32614a4e",
+      "feature": "hybrik",
+      "required": false,
+      "role": "MPG-restricted body-model program",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-144",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/utils.py",
+      "sha256": "0c7c210657532b0d2bc22f71b6cb82f2f474162b59045ca5a7078322d846d061",
+      "feature": "hybrik",
+      "required": false,
+      "role": "MPG-restricted body-model program",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-145",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/joint_names.py",
+      "sha256": "72e0bb7f23f698a48c909a4a00bddbd749b4f0ef9e2500713b1e858a337cde41",
+      "feature": "hybrik",
+      "required": false,
+      "role": "MPG-restricted body-model program",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-146",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/vertex_ids.py",
+      "sha256": "1bc36d2606c92ca14630a59ba12c7d85f207d5c4839fc1bb104ae3f0a3d7ae8f",
+      "feature": "hybrik",
+      "required": false,
+      "role": "MPG-restricted body-model program",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-147",
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/vertex_joint_selector.py",
+      "sha256": "f5751020cbfd07a6ae381d22747c435fe8a877807212e7c89df9aa60ba68c285",
+      "feature": "hybrik",
+      "required": false,
+      "role": "MPG-restricted body-model program",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplx/blob/main/LICENSE",
+      "acquisition": "Excluded restricted body-model program: an applicable redistribution grant is not established. Package-level code licensing does not replace body-model terms."
+    },
+    {
+      "id": "resource-148",
+      "path": "GVHMR/hmr4d/utils/body_model/utils.py",
+      "sha256": "635252efc3d46a703b3eba3fe533041d924d9e53ddaf472775ec182a7dbecf11",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Explicit smplify-x smpl_to_openpose copy with usage restrictions",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/vchoutas/smplify-x/blob/master/smplifyx/utils.py",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-149",
+      "path": "GVHMR/hmr4d/utils/body_model/smplx_lite.py",
+      "sha256": "b84b8a0a9da565347d1084c7322ba485aa12e14a84c3de44c016ab10bf3abaf1",
+      "feature": "gvhmr",
+      "required": true,
+      "role": "Adapted body-model/FK implementation with MPG-like distinctive comments and transform chain; pending provenance review",
+      "rights_status": "derived-source-review",
+      "publication": "held-notpublish",
+      "source": "https://github.com/zju3dv/GVHMR",
+      "acquisition": "Use only a separately authorized research installation after reviewing GVHMR and relevant body-model terms. Local possession is not redistribution permission."
+    },
+    {
+      "id": "resource-150",
+      "path": "kimodo_runtime/src/kimodo/skeleton/kinematics.py",
+      "sha256": "ada9f0c813f4085c5e630fa8d4a5e8d39e4f28aedb12d5c4bd8636558271f853",
+      "feature": "kimodo",
+      "required": true,
+      "role": "NVIDIA Apache-headed kinematics; tiny common transform_mat helper correspondence recorded without treating it as proof of a copyright conflict",
+      "rights_status": "upstream-apache-with-provenance-note",
+      "publication": "retain-upstream-apache",
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954",
+      "acquisition": "Retain NVIDIA Apache-2.0 attribution; the mathematical-helper source correspondence is recorded independently from body-model resource rights."
+    },
+    {
+      "id": "resource-151",
+      "path": "hybrik_runtime/pretrained_models/hybrik_hrnet.pth",
+      "sha256": "2151501a9999eca0940b5e8898511d964956f504780099e996e3ae59e22a94b4",
+      "feature": "hybrik",
+      "required": true,
+      "role": "Required current HRNet-SMPL inference checkpoint/body-model parameter/regressor",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/Jeff-sjtu/HybrIK",
+      "acquisition": "Obtain the checkpoint and SMPL resources separately under their respective terms; these files are not distributed here."
+    },
+    {
+      "id": "resource-152",
+      "path": "hybrik_runtime/model_files/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl",
+      "sha256": "98e65c74ad9b998783132f00880d1025a8d64b158e040e6ef13a557e5098bc42",
+      "feature": "hybrik",
+      "required": true,
+      "role": "Required current HRNet-SMPL inference checkpoint/body-model parameter/regressor",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/Jeff-sjtu/HybrIK",
+      "acquisition": "Obtain the checkpoint and SMPL resources separately under their respective terms; these files are not distributed here."
+    },
+    {
+      "id": "resource-153",
+      "path": "hybrik_runtime/model_files/J_regressor_h36m.npy",
+      "sha256": "c655cd7013d7829eb9acbebf0e43f952a3fa0305a53c35880e39192bfb6444a0",
+      "feature": "hybrik",
+      "required": true,
+      "role": "Required current HRNet-SMPL inference checkpoint/body-model parameter/regressor",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/Jeff-sjtu/HybrIK",
+      "acquisition": "Obtain the checkpoint and SMPL resources separately under their respective terms; these files are not distributed here."
+    },
+    {
+      "id": "resource-154",
+      "path": "hybrik_runtime/model_files/h36m_mean_beta.npy",
+      "sha256": "c74dd6f5bf6ee81ba94e7e297f5ef3d9929f9543ab79b16edf9b698aacd3357a",
+      "feature": "hybrik",
+      "required": true,
+      "role": "Required current HRNet-SMPL inference checkpoint/body-model parameter/regressor",
+      "rights_status": "no-redistribution-authority",
+      "publication": "held-notpublish",
+      "source": "https://github.com/Jeff-sjtu/HybrIK",
+      "acquisition": "Obtain the checkpoint and SMPL resources separately under their respective terms; these files are not distributed here."
+    },
+    {
+      "id": "resource-155",
+      "path": "third_party/SkinTokens/experiments/articulation_xl_quantization_256_token_4/grpo_1400.ckpt",
+      "sha256": "f4e4706a11cfb520cdde65156a0358545e4fbf8f36237aca01ea5e79d5cb5692",
+      "feature": "skintokens",
+      "required": true,
+      "role": "One of two jointly required TokenRig / FSQ-CVAE inference checkpoints",
+      "rights_status": "model-card-mit-code-gpl-separate",
+      "publication": "held-notpublish",
+      "source": "https://huggingface.co/VAST-AI/SkinTokens/tree/79736cad0fd84de384d5eede659b4ebd24effe33",
+      "acquisition": "Official model card marks checkpoints MIT, independently of nested GPL implementation. Obtain selected checkpoint after reviewing its notices and dependency/config versions; do not call this training-data clearance."
+    },
+    {
+      "id": "resource-156",
+      "path": "third_party/SkinTokens/experiments/skin_vae_2_10_32768/last.ckpt",
+      "sha256": "4843f49e58afff88345806b94ca82e6cc9d8def6e7432e2853c677b154de0ed4",
+      "feature": "skintokens",
+      "required": true,
+      "role": "One of two jointly required TokenRig / FSQ-CVAE inference checkpoints",
+      "rights_status": "model-card-mit-code-gpl-separate",
+      "publication": "held-notpublish",
+      "source": "https://huggingface.co/VAST-AI/SkinTokens/tree/79736cad0fd84de384d5eede659b4ebd24effe33",
+      "acquisition": "Official model card marks checkpoints MIT, independently of nested GPL implementation. Obtain selected checkpoint after reviewing its notices and dependency/config versions; do not call this training-data clearance."
+    }
+  ]
+}

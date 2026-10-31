@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "policy": "Source distribution boundaries and exact resource identities. Exclusion does not by itself classify every file as restricted. Applicable component licenses and corresponding-source obligations remain in force.",
+  "profiles": {
+    "public-workbench": {
+      "purpose": "Reviewed source-only workbench; HybrIK image-pose and GVHMR video-motion new inference are explicitly disabled as experimental, regardless of local environments. Existing assets and all other functions remain available under their own dependencies/licenses.",
+      "include_prefixes": [
+        "motionbuilder_app/",
+        "kimodo_runtime/src/",
+        "pytorch3d/",
+        "third_party/UniRig/",
+        "third_party/SkinTokens/",
+        "scripts/",
+        "tests/",
+        "docs/",
+        "licenses/",
+        ".github/"
+      ],
+      "root_files": [
+        ".gitattributes",
+        ".gitignore",
+        ".env.example",
+        "release-profile.json",
+        "LICENSE",
+        "LICENSE_SCOPE.md",
+        "NOTICE",
+        "README.md",
+        "README_EN.md",
+        "README_角色动画工作台.md",
+        "SECURITY.md",
+        "THIRD_PARTY_NOTICES.md",
+        "install.ps1",
+        "pytest.ini",
+        "requirements-dev.txt",
+        "requirements-hybrik.txt",
+        "requirements-kimodo.txt",
+        "requirements-service-lock.txt",
+        "requirements-windows.txt",
+        "start_motionbuilder.ps1",
+        "stop_motionbuilder.ps1",
+        "关闭MotionBuilder.bat",
+        "启动MotionBuilder.bat"
+      ],
+      "release_marker": {
+        "path": "release-profile.json",
+        "schema": "kairyth-release/v1",
+        "artifact_profile": "public-workbench",
+        "transform_id": "kairyth.release-profile.local-to-public/v1",
+        "disabled_capabilities": [
+          "hybrik_image_inference",
+          "gvhmr_video_inference"
+        ],
+        "experimental_message": "实验性，后续会更新与HybrIK以及GVHMR的兼容包"
+      },
+      "exclude_prefixes": [
+        "GVHMR/",
+        "hybrik_runtime/",
+        "research_backends/",
+        "detector_tool/"
+      ],
+      "exclude_paths": [
+        "motionbuilder_app/pose_runtime.py",
+        "motionbuilder_app/wsl_extract.py",
+        "tests/test_v2_pipeline_repairs.py",
+        "tests/test_v2_detection_pipeline.py",
+        "tests/test_hybrik_lazy_imports.py",
+        "tests/test_hybrik_worker_local.py",
+        "scripts/install_hybrik_runtime.ps1",
+        "scripts/hybrik-source-allowlist.json"
+      ],
+      "unresolved_included_distribution_paths": [],
+      "boundary_caveat": "Included configuration and JSON/NPZ clients do not relicense external implementations or models. Their applicable use, combination and redistribution terms remain independent.",
+      "required_files": [
+        "release-profile.json",
+        "LICENSE",
+        "NOTICE",
+        "THIRD_PARTY_NOTICES.md",
+        "docs/publication-rules.json",
+        "docs/gpl-source-evidence.json",
+        "licenses/Michelangelo-GPL-3.0.txt",
+        "third_party/SkinTokens/GPL_SOURCE_NOTICE.md",
+        "third_party/UniRig/src/model/michelangelo/LICENSE",
+        "third_party/UniRig/src/model/michelangelo/NOTICE.md"
+      ],
+      "licenses": "Root compatible combination GPLv3, preserved existing or-later rights; first-party original Apache-2.0 option; nested GPL/MIT/Apache/BSD/OFL apply by file, not a blanket MIT grant."
+    },
+    "standalone-detector": {
+      "purpose": "Source-only AGPL detector profile, applicable only when detector source is supplied; no model weights or installed dependencies.",
+      "include_prefixes": [
+        "detector_tool/"
+      ],
+      "root_files": [],
+      "exclude_prefixes": [],
+      "exclude_paths": [],
+      "required_files": [
+        "detector_tool/cli.py",
+        "detector_tool/LICENSE",
+        "detector_tool/NOTICES",
+        "detector_tool/requirements.txt",
+        "detector_tool/README.md"
+      ],
+      "licenses": "New detector CLI AGPL-3.0-only; upstream Ultralytics 8.2.42 AGPL, weights separate. Process boundaries do not waive obligations."
+    },
+    "local-research": {
+      "purpose": "Classification of research implementations, environments and user data excluded from source publication; building this profile is disabled.",
+      "paths": [
+        "GVHMR/",
+        "hybrik_runtime/",
+        "research_backends/",
+        "motionbuilder_app/pose_runtime.py",
+        "motionbuilder_app/wsl_extract.py",
+        "tests/test_v2_pipeline_repairs.py",
+        "tests/test_v2_detection_pipeline.py",
+        "tests/test_hybrik_lazy_imports.py",
+        "tests/test_hybrik_worker_local.py",
+        "scripts/install_hybrik_runtime.ps1",
+        "scripts/hybrik-source-allowlist.json",
+        "runtime/",
+        "data/",
+        ".local-data/",
+        "third_party/envs/",
+        "model_files/"
+      ],
+      "build_allowed": false,
+      "licenses": "GVHMR custom research/non-profit and nested rights; HybrIK MIT portions do not cover MPG/SMPL/SMPL-X programs/models; per-artifact terms apply."
+    }
+  },
+  "binary_policy": "Only exact paths and SHA256 values explicitly approved in docs/resource-license-evidence.json. No model checkpoint/environment/binary fallback and no recursive workspace copying.",
+  "gpl_selection": {
+    "unirig_michelangelo": "GPL-3.0-or-later, explicit file headers",
+    "skintokens_michelangelo": "GPL version 3 selected for compliance; file-level later option not established, no existing later rights narrowed",
+    "directory_external_derivation": "third_party/SkinTokens/src/model/skin_vae/autoencoders/miche_transformer_blocks.py; GPL-derived plus preserved MIT checkpoint material"
+  },
+  "history_policy": "Every reachable commit and ref must satisfy the selected publication profile; a source artifact check does not replace history inspection.",
+  "installation_scope": "Source artifacts exclude installed environments, credentials, caches, gated downloads, model weights and user data."
+}

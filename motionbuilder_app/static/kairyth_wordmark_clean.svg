@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1690" height="144"
+     viewBox="0 0 845 72"
+     role="img"
+     aria-labelledby="title desc"
+     shape-rendering="geometricPrecision">
+  <title id="title">Kairyth clean vector wordmark</title>
+  <desc id="desc">
+    A clean geometric KAIRYTH wordmark with a grey four-point sparkle beneath the A.
+    All characters are drawn as vector paths and polygons; no font is embedded or referenced.
+  </desc>
+
+  <!-- Transparent background -->
+  <g id="kairyth-wordmark" fill="#FFFFFF">
+    <!-- K -->
+    <rect x="0" y="0" width="13" height="71"/>
+    <path d="M65 0 L21 36 L63 70 H85 L40 36 L85 0 Z"/>
+
+    <!-- A -->
+    <path d="
+      M132 70
+      H149
+      L181 25
+      L185 19
+      L189 25
+      L222 70
+      H240
+      L193 4
+      Q189 -1 185 0
+      Q181 0 177 6
+      Z"/>
+
+    <!-- I -->
+    <rect x="297" y="0" width="13" height="71"/>
+
+    <!-- R -->
+    <path fill-rule="evenodd" d="
+      M372 1
+      L384 12
+      H430
+      C439 12 443 16 443 24
+      C443 32 439 35 430 35
+      H372
+      V70
+      H385
+      V46
+      H416
+      L440 70
+      H456
+      L433 46
+      C447 43 455 35 455 23
+      C455 8 445 0 429 0
+      H372
+      Z"/>
+
+    <!-- Y -->
+    <path d="
+      M503 0
+      H520
+      L550 32
+      L579 0
+      H596
+      L556 43
+      V70
+      H543
+      V43
+      Z"/>
+
+    <!-- T -->
+    <path d="
+      M646 0
+      H719
+      L710 12
+      H683
+      V70
+      H671
+      V12
+      H645
+      L637 0
+      Z"/>
+
+    <!-- H -->
+    <rect x="768" y="0" width="13" height="71"/>
+    <path d="
+      M832 0
+      H845
+      V71
+      H832
+      V39
+      H785
+      L794 28
+      H832
+      Z"/>
+  </g>
+
+  <!-- Grey sparkle -->
+  <path id="sparkle"
+        fill="#858585"
+        d="
+          M186 45
+          C188 52 192 56 200 58
+          C192 60 188 64 186 71
+          C184 64 180 60 172 58
+          C180 56 184 52 186 45
+          Z"/>
+</svg>

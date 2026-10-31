@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "scope": "Excluded source identities: 21 Python files and two documentation/metadata files. Classifications distinguish explicit restricted notices from unresolved file/family provenance.",
+  "files": [
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smpl/lbs.py",
+      "sha256": "7d01c0ffa555c7cb64324f0c6189bc568689b29b8e11e04ca2470c5c0221377b",
+      "publication": "held-notpublish",
+      "classification": "known-restricted-header",
+      "evidence": "Explicit MPG proprietary/license-agreement header in this file",
+      "authority": "No applicable redistribution grant is established for this material."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smpl/SMPL.py",
+      "sha256": "30c19784f87ff366ac973fba921c5b830429f9ba797fe0801da11cb4277690ed",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "SMPL wrapper imports MPG lbs and includes helpers corresponding to MPG utils; unlabelled source scope review pending",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/body_models.py",
+      "sha256": "bfe2f07a930510292de3e4a37f0ed8dbdb6a26d5c6447a3df39e086e0304055f",
+      "publication": "held-notpublish",
+      "classification": "known-restricted-header",
+      "evidence": "Explicit MPG proprietary/license-agreement header in this file",
+      "authority": "No applicable redistribution grant is established for this material."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/flame.py",
+      "sha256": "0ff60c402166495bc51bf3923dea7bc56aa02e169af0f50bf61514f28900d9f7",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/joint_names.py",
+      "sha256": "72e0bb7f23f698a48c909a4a00bddbd749b4f0ef9e2500713b1e858a337cde41",
+      "publication": "held-notpublish",
+      "classification": "known-restricted-header",
+      "evidence": "Explicit MPG proprietary/license-agreement header in this file",
+      "authority": "No applicable redistribution grant is established for this material."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/lbs.py",
+      "sha256": "295e1843baf073855c5665fb2611e5c0d84175a02a6084c0cdcbbdfd32614a4e",
+      "publication": "held-notpublish",
+      "classification": "known-restricted-header",
+      "evidence": "Explicit MPG proprietary/license-agreement header in this file",
+      "authority": "No applicable redistribution grant is established for this material."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/load_body_models.py",
+      "sha256": "f6898a8b55552800ffd8b54bb995368bfd212d235f1c4fb9c906e59c7bd9fddc",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/mano.py",
+      "sha256": "020311c26f840d23c9adb1e52e5941d9f1af77879123c4f232ca9836fa5bdea1",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/smplx.py",
+      "sha256": "983cc6cbe053202d13185ffca620618ef0f8c1a34c11b3cddb0b2a1e9a9f40fd",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/utils.py",
+      "sha256": "0c7c210657532b0d2bc22f71b6cb82f2f474162b59045ca5a7078322d846d061",
+      "publication": "held-notpublish",
+      "classification": "known-restricted-header",
+      "evidence": "Explicit MPG proprietary/license-agreement header in this file",
+      "authority": "No applicable redistribution grant is established for this material."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/vertex_ids.py",
+      "sha256": "1bc36d2606c92ca14630a59ba12c7d85f207d5c4839fc1bb104ae3f0a3d7ae8f",
+      "publication": "held-notpublish",
+      "classification": "known-restricted-header",
+      "evidence": "Explicit MPG proprietary/license-agreement header in this file",
+      "authority": "No applicable redistribution grant is established for this material."
+    },
+    {
+      "path": "hybrik_runtime/src/HybrIK/hybrik/models/layers/smplx/vertex_joint_selector.py",
+      "sha256": "f5751020cbfd07a6ae381d22747c435fe8a877807212e7c89df9aa60ba68c285",
+      "publication": "held-notpublish",
+      "classification": "known-restricted-header",
+      "evidence": "Explicit MPG proprietary/license-agreement header in this file",
+      "authority": "No applicable redistribution grant is established for this material."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/__init__.py",
+      "sha256": "bedf7c6739cd9055436bdec7e905c9555afa4b7dc916c14319841720468b050d",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/body_model_smplh.py",
+      "sha256": "1de6ba83af39fd6ed13ed41a22e43fca896060f3e2ae43909c1de7c45974b857",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/body_model_smplx.py",
+      "sha256": "082d465e5d4df76330a333ccd81dd74a2bbe7698e6f1454091de01b723a36466",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/body_model.py",
+      "sha256": "ec14fd91989b6c617085bf18bf1ad663df5300b140ca7a6c89c77e50bb8fc8a8",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/min_lbs.py",
+      "sha256": "fc29873853f5ccb08220ef1f7f68bd4a0c8b97a5abc1960f76070c39de10671d",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/smpl_lite.py",
+      "sha256": "f61eb2c395659875c78d1b644d312b7f5625bd859b1fafe4338d99c23eac4600",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/smplx_lite.py",
+      "sha256": "b84b8a0a9da565347d1084c7322ba485aa12e14a84c3de44c016ab10bf3abaf1",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "SMPL-X model adaptation/imports and FK transform-chain provenance review pending; mathematical similarity alone is not an infringement finding",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/utils.py",
+      "sha256": "635252efc3d46a703b3eba3fe533041d924d9e53ddaf472775ec182a7dbecf11",
+      "publication": "held-notpublish",
+      "classification": "known-attributed-restricted-source",
+      "evidence": "Explicit smplify-x source attribution and usage-restriction warning immediately before smpl_to_openpose",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/smplx_utils.py",
+      "sha256": "46dd122d9136d7060e0e0b4dd798128d81ad0efa7d57c3a6acf45cdd89c405fe",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "evidence": "Family dependency/provenance scope is unresolved; this classification is not a file-specific finding of restricted copying.",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/README.md",
+      "sha256": "b948b4a9f0d2762c494dd109a8f306307f54691d01a1d2e668ab2af60c1e8255",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "kind": "ancillary-documentation",
+      "evidence": "Documentation inside the temporarily held body_model family; no independent finding of restricted copied expression in this README",
+      "authority": "Excluded pending file-level provenance and license review."
+    },
+    {
+      "path": "GVHMR/hmr4d/utils/body_model/smpl_vert_segmentation.json",
+      "sha256": "8177e64a817d2b06530a60ed470904e9662433a02cb0b4a13acb6f4ec36f34d1",
+      "publication": "held-notpublish",
+      "classification": "pending-family-scope-review",
+      "kind": "ancillary-body-model-metadata",
+      "evidence": "Body-model-related vertex segmentation metadata inside the held family; its individual provenance and rights remain unverified",
+      "authority": "Excluded pending file-level provenance and license review."
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "scope": "10 explicitly GPL-3.0-or-later UniRig Python files plus 15 SkinTokens subtree Python files and 1 directory-external derived file. Version-3 compliance selected for SkinTokens; no invented later option, no removal of any existing later rights. Empty initialization files are family inventory, not an assertion of individual protected expression.",
+  "modifications": "2026-10-31: Kairyth attribution notices added at third_party/SkinTokens/GPL_SOURCE_NOTICE.md and third_party/UniRig/src/model/michelangelo/NOTICE.md. SkinTokens integration adaptations are identified in source-provenance-skintokens.json.",
+  "corresponding_source": "This source distribution includes the listed preferred modification source and license texts. Compiled distributions require corresponding source for the actual version, including modifications and relevant build/install source. Model weights are not included.",
+  "files": [
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/__init__.py",
+      "sha256": "6ae6173b0feb543572678feb8f7ca29f5d95acba2243d64de5bd9b176f8c31b6",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "931bb3c5695212aeabe8c49e7577b0afd62cfe0c78fdb0390029d28e09b209c3"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/get_model.py",
+      "sha256": "80c2ecec15fe0885cc1ca85a34e75c8d6d169265e6ae690d43b2aee8c1328257",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "2f55a66280621001aae3be37591ce2efcbf10e2c731f6532d103749d2ce61fcb"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/__init__.py",
+      "sha256": "6ae6173b0feb543572678feb8f7ca29f5d95acba2243d64de5bd9b176f8c31b6",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "931bb3c5695212aeabe8c49e7577b0afd62cfe0c78fdb0390029d28e09b209c3"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/modules/__init__.py",
+      "sha256": "471ea9d6418760279b00eb0b483d6eb2c4421bea27a4102d1d085a8620a41f7b",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "d4e124033d779a91a9a955f1f49d86b92563e95e46fa935c02c7d6e957cffbc9"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/modules/checkpoint.py",
+      "sha256": "c0ffc302295f6afbb95249568014ef6197590f78e5c9f9da9f16282e10b2b395",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "a0a0318db53b7198bc1e69b20fe6f94457efd71e5aa93532993df637692d4184"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/modules/embedder.py",
+      "sha256": "e6c4a875ab225872014b24700dcf41e01ed63841ba24020dddf24b54646a07a2",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "31b30ff08ff08d1e2cf5caf45cbeb1b91d53b350cbe87a2542eef2dbbca571ee"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/modules/transformer_blocks.py",
+      "sha256": "98aa715d397706030e65b2e02e641e8f5e6bc628cecf9eaab2719c9ff218dd11",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "10a9cfdb69b80ccc5548ee27d4bea38f1a0cdffc47af8c43f2b152a142c357cb"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/tsal/__init__.py",
+      "sha256": "9f6eb36873458c9c2dfe5bdb6ae61e781d936307fb1993f12eef4b16f0364fe5",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "559ee2f9435c5af911cba5fb110c2735e160815023314286eece5b43ae574aa8"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/tsal/sal_perceiver.py",
+      "sha256": "9365361e93a4950ba91d4302d7b43abe6b56e2cfee5e5dfb939e47a4b370c94c",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "7ab3c0c5988d46b72d2108f4031b014dfdc676351f09547db4a60cbe6e99dc35"
+    },
+    {
+      "path": "third_party/UniRig/src/model/michelangelo/models/tsal/tsal_base.py",
+      "sha256": "f5aad05ba9da2dc0fcfdd0d3b5e68814afb45bb83919f0da262e29642cca07e1",
+      "license": "GPL-3.0-or-later",
+      "evidence": "Explicit version 3 or any later version in original per-file header",
+      "source_commit": "6793c6640ff01c8fb389f3993434124bb43d2933",
+      "source": "https://github.com/VAST-AI-Research/UniRig",
+      "normalized_sha256": "0a6808627639d9f3fd89d2dc8244a810fc60bae1437e8a8748ee34c30da198d7"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/__init__.py",
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/get_model.py",
+      "sha256": "5b5a41f5e723c615a659740a5cb6bc9c9bdaeec3682302741b5e503406fb2958",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "5abe1de31b9ba044aacf04d96779400096e98a76ed284131c477ecfa1aea39f7"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/__init__.py",
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/__init__.py",
+      "sha256": "1f8d5ea1e6bada72f1f35a02531f26dc819e4c8795f84184e064433ff603235c",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "3b5d8cae7f1bec99e25a9e06a82766357312095e89b64ea6317427dea6d2a285"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/checkpoint.py",
+      "sha256": "b215beb25d2f74f9b49c6e6cda388d5713620a4157450b5eb9ede1a444d50ff5",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "7f78e8441c419b3ff1411eb0bfc1a23167a4da05252846bddc8e4ebb6ceb6406"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/distributions.py",
+      "sha256": "319e7e922e0d876b3bfc9e6abc23822b8185307273c440ff279835c7aea1cea7",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "aca6b009c8f5c055b061d9f177a5ab17bd74b7d883cfa072aa1ad4bbfecf67a1"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/embedder.py",
+      "sha256": "9ee4338899fcc5ccf30850b57deb939cd2432d0c0a894b4a84d2eaea39dbe582",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "425d3d6f8b38ad6b2d7426923b75e577a509c995357001c85eecbc4ca9ad8b34"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/modules/transformer_blocks.py",
+      "sha256": "966e5d1f8846f151ecc90ab787b5cbd2525d2da1f6715635027da8632da99a9d",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "4cb8bb8846e51af10d8df142084d0d2d325a9d46bd336a7d01a95beffca3d87e"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/__init__.py",
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/loss.py",
+      "sha256": "81d4e2ccf9c28c5bfceb7a59a2c57f3cf9864a1d52b1405492b360ae4c1c83aa",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "7ee2e11dd6968c97897596def926ee4f84d30d4bc29ec4ac56a538f8dcfd748b"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/sal_perceiver.py",
+      "sha256": "a9e8f7b4c304902ebcaa10cdb128245082393079915ea3946a21397950c0a366",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "78b04042eaac8afbae2cc863c9d9a9108beadc906c65e5f59bd7cc0210b06717"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/models/tsal/tsal_base.py",
+      "sha256": "001cc1c85065e073e63cdbfc209955de8c5d8420697212650e09e9eb6f5416dd",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "27a05eca1936d4d7da4cc522afbab2a8996f03efd0f75194a8aecedeaf1668a7"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/utils/__init__.py",
+      "sha256": "2311827138f043d946c7160fad7b8d1b7acf2eebabc05cb2d157866128ee0232",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "abcf6e6b06280ad63efd142ae357d985aaa3ffefd630e543f51ea4720c45e646"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/utils/eval.py",
+      "sha256": "4075b21e3c92477d1b64e3d5e7f9bd018f787a704cfab70fa271c7e6550127a1",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "a79d2474b008b71a1784f21ab09fb53e27afd04b07675f76e6120a49fa04dc7b"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/michelangelo/utils/misc.py",
+      "sha256": "2d72e8190b5be638667bf6d4828ca29777547180bdd254abf2189ebf8fb421a8",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "SkinTokens collaborator acknowledges GPL subtree; public source comparisons. Do not assign the same individual origin to empty initialization files.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/tree/6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "99440387d875d67b18c078f52f3592a87ca050407f81e1a17b1b0d836ac18dd5"
+    },
+    {
+      "path": "third_party/SkinTokens/src/model/skin_vae/autoencoders/miche_transformer_blocks.py",
+      "sha256": "817df665d8c42b2ec560c0a24ae88659fd49212c7443986f26dca0231e7a3317",
+      "license": "GPLv3 selected; do not infer or narrow unverified later-version rights",
+      "evidence": "init_linear, ResidualAttentionBlock and Transformer AST identical; additional classes modified; checkpoint explicitly credits guided-diffusion.",
+      "source_commit": "273b691d35989d71cd17ff2895fdc735097b92d1",
+      "earlier_source_commit": "6d83b0bacef92715dd5179d45647ed9a3d39bc95",
+      "source": "https://github.com/NeuralCarver/Michelangelo/blob/6d83b0bacef92715dd5179d45647ed9a3d39bc95/michelangelo/models/modules/transformer_blocks.py",
+      "previous_audit_comparison": "identical",
+      "normalized_sha256": "ca2c2ac8885914910e2e7c3297a6f8f31629de41969e552db542325d6a4853bf"
+    }
+  ],
+  "hash_method": "sha256 records audited raw working-copy bytes; normalized_sha256 uses CRLF-to-LF normalization for source checkouts. Version evidence is not inferred from line-ending differences."
+}
